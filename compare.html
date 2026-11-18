@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Compare | CTRL+CAR</title>
+
+    <!-- =====================================================
+         FONTS
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Mono:wght@300;400;500&family=Rajdhani:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+    <!-- Favicon -->
+
+<link rel="icon" type="image/png" sizes="32x32"
+      href="images/assets/favicon/favicon-32x32.png">
+
+<link rel="icon" type="image/png" sizes="16x16"
+      href="images/assets/favicon/favicon-16x16.png">
+
+<link rel="apple-touch-icon"
+      href="images/assets/favicon/apple-touch-icon.png">
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="css/compare.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         PAGE WRAPPER
+    ====================================================== -->
+
+    <div class="compare-page">
+
+
+        <!-- =================================================
+             NAVBAR
+        ================================================== -->
+
+        <header class="compare-navbar">
+
+            <div class="navbar-inner">
+
+
+                <!-- BRAND LOGO -->
+
+                <a
+                    href="index.html"
+                    class="brand-logo"
+                >
+
+                    <img
+                        src="images/assets/logo/logo-dark.png"
+                        alt="CTRL+CAR"
+                    >
+
+                </a>
+
+
+                <!-- NAVIGATION -->
+
+                <nav class="main-navigation">
+
+                    <a href="index.html">
+                        HOME
+                    </a>
+
+                    <a href="luxury.html">
+                        LUXURY
+                    </a>
+
+                    <a href="vintage.html">
+                        VINTAGE
+                    </a>
+
+                    <a href="index.html#sports">
+                        SPORTS
+                    </a>
+
+                    <a
+                        href="compare.html"
+                        class="active"
+                    >
+                        COMPARE
+                    </a>
+
+                    <a href="index.html#contact">
+                        CONTACT
+                    </a>
+
+                </nav>
+
+
+                <!-- COLLECTION NUMBER -->
+
+                <div class="page-index">
+
+                    04 / 04
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <main>
+
+
+            <section class="compare-hero">
+
+
+                <div class="hero-eyebrow">
+
+                    <span class="eyebrow-line"></span>
+
+                    AUTOMOTIVE COMPARISON
+
+                    <span class="eyebrow-line"></span>
+
+                </div>
+
+
+                <h1>
+
+                    Compare
+                    <em>Character.</em>
+
+                </h1>
+
+
+                <p class="hero-description">
+
+                    Two automobiles.
+                    Two personalities.
+                    One considered choice.
+
+                    <br>
+
+                    Explore the differences in performance,
+                    engineering and character.
+
+                </p>
+
+
+                <div class="hero-note">
+
+                    SELECT · COMPARE · DECIDE
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 COMPARISON AREA
+            ================================================== -->
+
+            <section class="comparison-section">
+
+
+                <!-- SECTION HEADER -->
+
+                <div class="comparison-heading">
+
+                    <div>
+
+                        <span class="section-number">
+                            01
+                        </span>
+
+                        <h2>
+                            Choose your automobiles
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+
+                        Compare vehicles across
+                        collections without limits.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     TWO VEHICLE CARDS
+                ================================================== -->
+
+                <div class="vehicle-selection">
+
+
+                    <!-- =============================================
+                         VEHICLE ONE
+                    ============================================== -->
+
+                    <article
+                        class="vehicle-panel vehicle-one"
+                    >
+
+
+                        <div class="panel-topline">
+
+                            <span>
+                                AUTOMOBILE 01
+                            </span>
+
+                            <span>
+                                A
+                            </span>
+
+                        </div>
+
+
+                        <div class="vehicle-select-area">
+
+
+                            <label for="categoryOne">
+                                COLLECTION
+                            </label>
+
+
+                            <select id="categoryOne">
+
+                                <option value="">
+                                    Select Collection
+                                </option>
+
+                                <option value="luxury">
+                                    Luxury
+                                </option>
+
+                                <option value="vintage">
+                                    Vintage
+                                </option>
+
+                                <option value="sports">
+                                    Sports
+                                </option>
+
+                            </select>
+
+
+
+                            <label for="carOne">
+                                AUTOMOBILE
+                            </label>
+
+
+                            <select
+                                id="carOne"
+                                disabled
+                            >
+
+                                <option value="">
+                                    Select Automobile
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <div class="selected-vehicle">
+
+
+                            <div class="vehicle-image">
+
+                                <img
+                                    id="imageOne"
+                                    src="images/luxury/s-class.jpg"
+                                    alt="Mercedes-Benz S-Class"
+                                >
+
+                                <div class="image-overlay">
+
+                                    <span>
+                                        CTRL+CAR
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="vehicle-information">
+
+                                <span
+                                    class="vehicle-category"
+                                    id="categoryLabelOne"
+                                >
+                                    LUXURY
+                                </span>
+
+
+                                <h3 id="nameOne">
+
+                                    Mercedes-Benz
+                                    <em>S-Class</em>
+
+                                </h3>
+
+
+                                <p id="taglineOne">
+
+                                    Executive luxury,
+                                    engineered without compromise.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =============================================
+                         VERSUS
+                    ============================================== -->
+
+                    <div class="versus">
+
+                        <span class="versus-line"></span>
+
+                        <div class="versus-circle">
+
+                            VS
+
+                        </div>
+
+                        <span class="versus-line"></span>
+
+                        <button
+                            type="button"
+                            id="swapCars"
+                            class="swap-button"
+                        >
+
+                            ↔
+                            <span>SWAP</span>
+
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- =============================================
+                         VEHICLE TWO
+                    ============================================== -->
+
+                    <article
+                        class="vehicle-panel vehicle-two"
+                    >
+
+
+                        <div class="panel-topline">
+
+                            <span>
+                                AUTOMOBILE 02
+                            </span>
+
+                            <span>
+                                B
+                            </span>
+
+                        </div>
+
+
+                        <div class="vehicle-select-area">
+
+
+                            <label for="categoryTwo">
+                                COLLECTION
+                            </label>
+
+
+                            <select id="categoryTwo">
+
+                                <option value="">
+                                    Select Collection
+                                </option>
+
+                                <option value="luxury">
+                                    Luxury
+                                </option>
+
+                                <option value="vintage">
+                                    Vintage
+                                </option>
+
+                                <option value="sports">
+                                    Sports
+                                </option>
+
+                            </select>
+
+
+
+                            <label for="carTwo">
+                                AUTOMOBILE
+                            </label>
+
+
+                            <select
+                                id="carTwo"
+                                disabled
+                            >
+
+                                <option value="">
+                                    Select Automobile
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <div class="selected-vehicle">
+
+
+                            <div class="vehicle-image">
+
+                                <img
+                                    id="imageTwo"
+                                    src="images/sports/porsche-911-gt3.jpg"
+                                    alt="Porsche 911 GT3"
+                                >
+
+                                <div class="image-overlay">
+
+                                    <span>
+                                        CTRL+CAR
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="vehicle-information">
+
+                                <span
+                                    class="vehicle-category"
+                                    id="categoryLabelTwo"
+                                >
+                                    SPORTS
+                                </span>
+
+
+                                <h3 id="nameTwo">
+
+                                    Porsche
+                                    <em>911 GT3</em>
+
+                                </h3>
+
+
+                                <p id="taglineTwo">
+
+                                    Track-bred precision
+                                    with road-going character.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     COMPARISON DETAILS
+                ================================================== -->
+
+                <section class="comparison-details">
+
+
+                    <div class="details-header">
+
+                        <span class="section-number">
+                            02
+                        </span>
+
+                        <div>
+
+                            <span class="details-kicker">
+                                SIDE BY SIDE
+                            </span>
+
+                            <h2>
+                                The numbers
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PERFORMANCE -->
+
+                    <div class="spec-group">
+
+
+                        <div class="spec-group-title">
+
+                            <span>
+                                01
+                            </span>
+
+                            <h3>
+                                PERFORMANCE
+                            </h3>
+
+                        </div>
+
+
+                        <div class="spec-table">
+
+
+                            <div class="spec-row spec-heading">
+
+                                <div>
+                                    SPECIFICATION
+                                </div>
+
+                                <div id="tableNameOne">
+                                    S-CLASS
+                                </div>
+
+                                <div id="tableNameTwo">
+                                    911 GT3
+                                </div>
+
+                            </div>
+
+
+                            <div class="spec-row">
+
+                                <div>
+                                    POWER
+                                </div>
+
+                                <div id="powerOne">
+                                    496 HP
+                                </div>
+
+                                <div id="powerTwo">
+                                    502 HP
+                                </div>
+
+                            </div>
+
+
+                            <div class="spec-row">
+
+                                <div>
+                                    TORQUE
+                                </div>
+
+                                <div id="torqueOne">
+                                    700 Nm
+                                </div>
+
+                                <div id="torqueTwo">
+                                    470 Nm
+                                </div>
+
+                            </div>
+
+
+                            <div class="spec-row">
+
+                                <div>
+                                    0–100 KM/H
+                                </div>
+
+                                <div id="accelerationOne">
+                                    4.9 SEC
+                                </div>
+
+                                <div id="accelerationTwo">
+                                    3.4 SEC
+                                </div>
+
+                            </div>
+
+
+                            <div class="spec-row">
+
+                                <div>
+                                    TOP SPEED
+                                </div>
+
+                                <div id="speedOne">
+                                    250 KM/H
+                                </div>
+
+                                <div id="speedTwo">
+                                    318 KM/H
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ENGINE -->
+
+                    <div class="spec-group">
+
+
+                        <div class="spec-group-title">
+
+                            <span>
+                                02
+                            </span>
+
+                            <h3>
+                                ENGINE & TRANSMISSION
+                            </h3>
+
+                        </div>
+
+
+                        <div class="spec-table">
+
+
+                            <div class="spec-row">
+
+                                <div>
+                                    ENGINE
+                                </div>
+
+                                <div id="engineOne">
+                                    3.0L INLINE-6
+                                </div>
+
+                                <div id="engineTwo">
+                                    4.0L FLAT-6
+                                </div>
+
+                            </div>
+
+
+                            <div class="spec-row">
+
+                                <div>
+                                    TRANSMISSION
+                                </div>
+
+                                <div id="transmissionOne">
+                                    9-SPEED AUTOMATIC
+                                </div>
+
+                                <div id="transmissionTwo">
+                                    7-SPEED PDK
+                                </div>
+
+                            </div>
+
+
+                            <div class="spec-row">
+
+                                <div>
+                                    DRIVETRAIN
+                                </div>
+
+                                <div id="driveOne">
+                                    RWD / AWD
+                                </div>
+
+                                <div id="driveTwo">
+                                    RWD
+                                </div>
+
+                            </div>
+
+
+                            <div class="spec-row">
+
+                                <div>
+                                    FUEL TYPE
+                                </div>
+
+                                <div id="fuelOne">
+                                    PETROL
+                                </div>
+
+                                <div id="fuelTwo">
+                                    PETROL
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- DIMENSIONS -->
+
+                    <div class="spec-group">
+
+
+                        <div class="spec-group-title">
+
+                            <span>
+                                03
+                            </span>
+
+                            <h3>
+                                DIMENSIONS
+                            </h3>
+
+                        </div>
+
+
+                        <div class="spec-table">
+
+
+                            <div class="spec-row">
+
+                                <div>
+                                    LENGTH
+                                </div>
+
+                                <div id="lengthOne">
+                                    5,179 MM
+                                </div>
+
+                                <div id="lengthTwo">
+                                    4,573 MM
+                                </div>
+
+                            </div>
+
+
+                            <div class="spec-row">
+
+                                <div>
+                                    WIDTH
+                                </div>
+
+                                <div id="widthOne">
+                                    1,921 MM
+                                </div>
+
+                                <div id="widthTwo">
+                                    1,852 MM
+                                </div>
+
+                            </div>
+
+
+                            <div class="spec-row">
+
+                                <div>
+                                    SEATING
+                                </div>
+
+                                <div id="seatsOne">
+                                    5
+                                </div>
+
+                                <div id="seatsTwo">
+                                    2
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- EFFICIENCY -->
+
+                    <div class="spec-group">
+
+
+                        <div class="spec-group-title">
+
+                            <span>
+                                04
+                            </span>
+
+                            <h3>
+                                EFFICIENCY
+                            </h3>
+
+                        </div>
+
+
+                        <div class="spec-table">
+
+
+                            <div class="spec-row">
+
+                                <div>
+                                    AVERAGE
+                                </div>
+
+                                <div id="mileageOne">
+                                    12.6 KM/L
+                                </div>
+
+                                <div id="mileageTwo">
+                                    8.5 KM/L
+                                </div>
+
+                            </div>
+
+
+                            <div class="spec-row">
+
+                                <div>
+                                    CHARACTER
+                                </div>
+
+                                <div id="characterOne">
+                                    REFINED
+                                </div>
+
+                                <div id="characterTwo">
+                                    PERFORMANCE
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                </section>
+
+
+
+                <!-- =================================================
+                     FINAL STATEMENT
+                ================================================== -->
+
+                <section class="comparison-statement">
+
+
+                    <div class="statement-mark">
+
+                        “
+
+                    </div>
+
+
+                    <p>
+
+                        Numbers tell you what a car can do.
+
+                        <br>
+
+                        <em>
+                            Character tells you why you want it.
+                        </em>
+
+                    </p>
+
+
+                    <span>
+
+                        CTRL+CAR · AUTOMOTIVE ARCHIVE
+
+                    </span>
+
+
+                </section>
+
+
+            </section>
+
+
+        </main>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer class="compare-footer">
+
+
+            <div class="footer-logo">
+
+                <img
+                    src="images/assets/logo/logo-dark.png"
+                    alt="CTRL+CAR"
+                >
+
+            </div>
+
+
+            <div class="footer-center">
+
+                <span>
+                    CTRL+CAR
+                </span>
+
+                <p>
+                    THE AUTOMOTIVE ARCHIVE
+                </p>
+
+            </div>
+
+
+            <a
+                href="index.html"
+                class="back-home"
+            >
+
+                RETURN HOME
+                <span>→</span>
+
+            </a>
+
+
+        </footer>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         COMPARE JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        /* =====================================================
+           CAR DATABASE
+        ====================================================== */
+
+        const compareCars = {
+
+            luxury: {
+
+                "Mercedes-Benz S-Class": {
+                    image: "images/luxury/s-class.jpg",
+                    category: "LUXURY",
+                    name: "Mercedes-Benz S-Class",
+                    tagline: "Executive luxury, engineered without compromise.",
+                    power: "496 HP",
+                    torque: "700 Nm",
+                    acceleration: "4.9 SEC",
+                    speed: "250 KM/H",
+                    engine: "3.0L INLINE-6",
+                    transmission: "9-SPEED AUTOMATIC",
+                    drivetrain: "RWD / AWD",
+                    fuel: "PETROL",
+                    length: "5,179 MM",
+                    width: "1,921 MM",
+                    seats: "5",
+                    mileage: "12.6 KM/L",
+                    character: "REFINED"
+                },
+
+                "BMW 7 Series": {
+                    image: "images/luxury/bmw-7-series.jpg",
+                    category: "LUXURY",
+                    name: "BMW 7 Series",
+                    tagline: "Executive presence with modern performance.",
+                    power: "375 HP",
+                    torque: "520 Nm",
+                    acceleration: "5.4 SEC",
+                    speed: "250 KM/H",
+                    engine: "3.0L INLINE-6",
+                    transmission: "8-SPEED AUTOMATIC",
+                    drivetrain: "RWD / AWD",
+                    fuel: "PETROL",
+                    length: "5,391 MM",
+                    width: "1,950 MM",
+                    seats: "5",
+                    mileage: "12.6 KM/L",
+                    character: "EXECUTIVE"
+                },
+
+                "Range Rover": {
+                    image: "images/luxury/range-rover.jpg",
+                    category: "LUXURY",
+                    name: "Range Rover",
+                    tagline: "Quiet authority with extraordinary capability.",
+                    power: "355 HP",
+                    torque: "500 Nm",
+                    acceleration: "6.1 SEC",
+                    speed: "234 KM/H",
+                    engine: "3.0L INLINE-6",
+                    transmission: "8-SPEED AUTOMATIC",
+                    drivetrain: "AWD",
+                    fuel: "PETROL",
+                    length: "5,052 MM",
+                    width: "2,047 MM",
+                    seats: "5",
+                    mileage: "9.2 KM/L",
+                    character: "COMMANDING"
+                },
+
+                "Mercedes-Benz GLS": {
+                    image: "images/luxury/mercedes-gls.jpg",
+                    category: "LUXURY",
+                    name: "Mercedes-Benz GLS",
+                    tagline: "Full-size luxury with effortless road presence.",
+                    power: "375 HP",
+                    torque: "500 Nm",
+                    acceleration: "5.9 SEC",
+                    speed: "250 KM/H",
+                    engine: "3.0L INLINE-6",
+                    transmission: "9-SPEED AUTOMATIC",
+                    drivetrain: "AWD",
+                    fuel: "PETROL",
+                    length: "5,207 MM",
+                    width: "1,956 MM",
+                    seats: "7",
+                    mileage: "10.5 KM/L",
+                    character: "GRAND"
+                },
+
+                "Porsche Panamera": {
+                    image: "images/luxury/porsche-panamera.jpg",
+                    category: "LUXURY",
+                    name: "Porsche Panamera",
+                    tagline: "Grand touring luxury with a sporting pulse.",
+                    power: "348 HP",
+                    torque: "500 Nm",
+                    acceleration: "5.3 SEC",
+                    speed: "272 KM/H",
+                    engine: "2.9L V6",
+                    transmission: "8-SPEED PDK",
+                    drivetrain: "RWD / AWD",
+                    fuel: "PETROL",
+                    length: "5,052 MM",
+                    width: "1,938 MM",
+                    seats: "4",
+                    mileage: "11.2 KM/L",
+                    character: "GRAND TOURER"
+                }
+
+            },
+
+
+            vintage: {
+
+                "Ford Mustang": {
+                    image: "images/vintage/ford-mustang-classic.jpg",
+                    category: "VINTAGE",
+                    name: "Ford Mustang",
+                    tagline: "An American icon shaped by attitude.",
+                    power: "300 HP",
+                    torque: "407 Nm",
+                    acceleration: "6.0 SEC",
+                    speed: "210 KM/H",
+                    engine: "4.7L V8",
+                    transmission: "4-SPEED MANUAL",
+                    drivetrain: "RWD",
+                    fuel: "PETROL",
+                    length: "4,610 MM",
+                    width: "1,732 MM",
+                    seats: "4",
+                    mileage: "7.5 KM/L",
+                    character: "ICONIC"
+                },
+
+                "Jaguar E-Type": {
+                    image: "images/vintage/jaguar-e-type.jpg",
+                    category: "VINTAGE",
+                    name: "Jaguar E-Type",
+                    tagline: "British elegance distilled into a sports car.",
+                    power: "265 HP",
+                    torque: "384 Nm",
+                    acceleration: "7.0 SEC",
+                    speed: "241 KM/H",
+                    engine: "4.2L INLINE-6",
+                    transmission: "4-SPEED MANUAL",
+                    drivetrain: "RWD",
+                    fuel: "PETROL",
+                    length: "4,680 MM",
+                    width: "1,680 MM",
+                    seats: "2",
+                    mileage: "7.0 KM/L",
+                    character: "TIMELESS"
+                },
+
+                "Mercedes-Benz 300 SL": {
+                    image: "images/vintage/mercedes-300sl.jpg",
+                    category: "VINTAGE",
+                    name: "Mercedes-Benz 300 SL",
+                    tagline: "Engineering history wrapped in sculptural form.",
+                    power: "240 HP",
+                    torque: "294 Nm",
+                    acceleration: "8.8 SEC",
+                    speed: "245 KM/H",
+                    engine: "3.0L INLINE-6",
+                    transmission: "4-SPEED MANUAL",
+                    drivetrain: "RWD",
+                    fuel: "PETROL",
+                    length: "4,520 MM",
+                    width: "1,780 MM",
+                    seats: "2",
+                    mileage: "7.5 KM/L",
+                    character: "LEGENDARY"
+                },
+
+                "Porsche 911": {
+                    image: "images/vintage/porsche-911-classic.jpg",
+                    category: "VINTAGE",
+                    name: "Porsche 911",
+                    tagline: "The silhouette that defined a generation.",
+                    power: "180 HP",
+                    torque: "235 Nm",
+                    acceleration: "7.5 SEC",
+                    speed: "225 KM/H",
+                    engine: "2.7L FLAT-6",
+                    transmission: "5-SPEED MANUAL",
+                    drivetrain: "RWD",
+                    fuel: "PETROL",
+                    length: "4,291 MM",
+                    width: "1,610 MM",
+                    seats: "4",
+                    mileage: "8.0 KM/L",
+                    character: "PURE"
+                }
+
+            },
+
+
+            sports: {
+
+                "Chevrolet Corvette C8": {
+                    image: "images/sports/corvette-c8.jpg",
+                    category: "SPORTS",
+                    name: "Chevrolet Corvette C8",
+                    tagline: "American performance, re-engineered from the ground up.",
+                    power: "495 HP",
+                    torque: "637 Nm",
+                    acceleration: "2.9 SEC",
+                    speed: "312 KM/H",
+                    engine: "6.2L V8",
+                    transmission: "8-SPEED DCT",
+                    drivetrain: "RWD",
+                    fuel: "PETROL",
+                    length: "4,630 MM",
+                    width: "1,934 MM",
+                    seats: "2",
+                    mileage: "9.0 KM/L",
+                    character: "RAW"
+                },
+
+                "Ferrari 296 GTB": {
+                    image: "images/sports/ferrari-296-gtb.jpg",
+                    category: "SPORTS",
+                    name: "Ferrari 296 GTB",
+                    tagline: "Italian performance sharpened by hybrid technology.",
+                    power: "819 HP",
+                    torque: "740 Nm",
+                    acceleration: "2.9 SEC",
+                    speed: "330 KM/H",
+                    engine: "3.0L V6 HYBRID",
+                    transmission: "8-SPEED DCT",
+                    drivetrain: "RWD",
+                    fuel: "PETROL / HYBRID",
+                    length: "4,565 MM",
+                    width: "1,958 MM",
+                    seats: "2",
+                    mileage: "15.6 KM/L",
+                    character: "EXOTIC"
+                },
+
+                "Lamborghini Huracan": {
+                    image: "images/sports/lamborghini-huracan.jpg",
+                    category: "SPORTS",
+                    name: "Lamborghini Huracan",
+                    tagline: "Dramatic design backed by uncompromising V10 power.",
+                    power: "631 HP",
+                    torque: "600 Nm",
+                    acceleration: "2.9 SEC",
+                    speed: "325 KM/H",
+                    engine: "5.2L V10",
+                    transmission: "7-SPEED DCT",
+                    drivetrain: "AWD",
+                    fuel: "PETROL",
+                    length: "4,520 MM",
+                    width: "1,933 MM",
+                    seats: "2",
+                    mileage: "7.0 KM/L",
+                    character: "DRAMATIC"
+                },
+
+                "Nissan GT-R": {
+                    image: "images/sports/nissan-gtr.jpg",
+                    category: "SPORTS",
+                    name: "Nissan GT-R",
+                    tagline: "Japanese engineering with legendary all-weather grip.",
+                    power: "565 HP",
+                    torque: "633 Nm",
+                    acceleration: "2.9 SEC",
+                    speed: "315 KM/H",
+                    engine: "3.8L V6 TWIN-TURBO",
+                    transmission: "6-SPEED DCT",
+                    drivetrain: "AWD",
+                    fuel: "PETROL",
+                    length: "4,690 MM",
+                    width: "1,895 MM",
+                    seats: "4",
+                    mileage: "8.5 KM/L",
+                    character: "LEGENDARY"
+                },
+
+                "Porsche 911 GT3": {
+                    image: "images/sports/porsche-911-gt3.jpg",
+                    category: "SPORTS",
+                    name: "Porsche 911 GT3",
+                    tagline: "Motorsport precision engineered for the road.",
+                    power: "502 HP",
+                    torque: "470 Nm",
+                    acceleration: "3.4 SEC",
+                    speed: "318 KM/H",
+                    engine: "4.0L FLAT-6",
+                    transmission: "7-SPEED PDK",
+                    drivetrain: "RWD",
+                    fuel: "PETROL",
+                    length: "4,573 MM",
+                    width: "1,852 MM",
+                    seats: "2",
+                    mileage: "8.5 KM/L",
+                    character: "PERFORMANCE"
+                }
+
+            }
+
+        };
+
+
+
+        /* =====================================================
+           ELEMENTS
+        ====================================================== */
+
+        const categoryOne =
+            document.getElementById("categoryOne");
+
+        const categoryTwo =
+            document.getElementById("categoryTwo");
+
+        const carOne =
+            document.getElementById("carOne");
+
+        const carTwo =
+            document.getElementById("carTwo");
+
+        const swapButton =
+            document.getElementById("swapCars");
+
+
+
+        /* =====================================================
+           POPULATE CAR DROPDOWN
+        ====================================================== */
+
+        function populateCars(categorySelect, carSelect) {
+
+            const category = categorySelect.value;
+
+            carSelect.innerHTML =
+                '<option value="">Select Automobile</option>';
+
+            if (!category) {
+
+                carSelect.disabled = true;
+
+                return;
+
+            }
+
+            const availableCars =
+                compareCars[category];
+
+            Object.keys(availableCars).forEach(function (carName) {
+
+                const option =
+                    document.createElement("option");
+
+                option.value = carName;
+
+                option.textContent = carName;
+
+                carSelect.appendChild(option);
+
+            });
+
+            carSelect.disabled = false;
+
+        }
+
+
+
+        /* =====================================================
+           UPDATE CAR
+        ====================================================== */
+
+        function updateVehicle(side, category, carName) {
+
+            if (!category || !carName) return;
+
+            const car =
+                compareCars[category][carName];
+
+            if (!car) return;
+
+
+            const suffix =
+                side === "one" ? "One" : "Two";
+
+
+            document.getElementById(
+                "image" + suffix
+            ).src = car.image;
+
+
+            document.getElementById(
+                "image" + suffix
+            ).alt = car.name;
+
+
+            document.getElementById(
+                "categoryLabel" + suffix
+            ).textContent = car.category;
+
+
+            document.getElementById(
+                "name" + suffix
+            ).innerHTML =
+                car.name.replace(
+                    " ",
+                    " <em>"
+                ) + "</em>";
+
+
+            document.getElementById(
+                "tagline" + suffix
+            ).textContent = car.tagline;
+
+
+            document.getElementById(
+                "tableName" + suffix
+            ).textContent =
+                car.name.toUpperCase();
+
+
+            document.getElementById(
+                "power" + suffix
+            ).textContent = car.power;
+
+
+            document.getElementById(
+                "torque" + suffix
+            ).textContent = car.torque;
+
+
+            document.getElementById(
+                "acceleration" + suffix
+            ).textContent = car.acceleration;
+
+
+            document.getElementById(
+                "speed" + suffix
+            ).textContent = car.speed;
+
+
+            document.getElementById(
+                "engine" + suffix
+            ).textContent = car.engine;
+
+
+            document.getElementById(
+                "transmission" + suffix
+            ).textContent = car.transmission;
+
+
+            document.getElementById(
+                "drive" + suffix
+            ).textContent = car.drivetrain;
+
+
+            document.getElementById(
+                "fuel" + suffix
+            ).textContent = car.fuel;
+
+
+            document.getElementById(
+                "length" + suffix
+            ).textContent = car.length;
+
+
+            document.getElementById(
+                "width" + suffix
+            ).textContent = car.width;
+
+
+            document.getElementById(
+                "seats" + suffix
+            ).textContent = car.seats;
+
+
+            document.getElementById(
+                "mileage" + suffix
+            ).textContent = car.mileage;
+
+
+            document.getElementById(
+                "character" + suffix
+            ).textContent = car.character;
+
+        }
+
+
+
+        /* =====================================================
+           CATEGORY EVENTS
+        ====================================================== */
+
+        categoryOne.addEventListener(
+            "change",
+            function () {
+
+                populateCars(
+                    categoryOne,
+                    carOne
+                );
+
+            }
+        );
+
+
+        categoryTwo.addEventListener(
+            "change",
+            function () {
+
+                populateCars(
+                    categoryTwo,
+                    carTwo
+                );
+
+            }
+        );
+
+
+
+        /* =====================================================
+           CAR EVENTS
+        ====================================================== */
+
+        carOne.addEventListener(
+            "change",
+            function () {
+
+                updateVehicle(
+                    "one",
+                    categoryOne.value,
+                    carOne.value
+                );
+
+            }
+        );
+
+
+        carTwo.addEventListener(
+            "change",
+            function () {
+
+                updateVehicle(
+                    "two",
+                    categoryTwo.value,
+                    carTwo.value
+                );
+
+            }
+        );
+
+
+
+        /* =====================================================
+           SWAP VEHICLES
+        ====================================================== */
+
+        swapButton.addEventListener(
+            "click",
+            function () {
+
+                const categoryValueOne =
+                    categoryOne.value;
+
+                const categoryValueTwo =
+                    categoryTwo.value;
+
+                const carValueOne =
+                    carOne.value;
+
+                const carValueTwo =
+                    carTwo.value;
+
+
+                categoryOne.value =
+                    categoryValueTwo;
+
+                categoryTwo.value =
+                    categoryValueOne;
+
+
+                populateCars(
+                    categoryOne,
+                    carOne
+                );
+
+                populateCars(
+                    categoryTwo,
+                    carTwo
+                );
+
+
+                carOne.value =
+                    carValueTwo;
+
+                carTwo.value =
+                    carValueOne;
+
+
+                updateVehicle(
+                    "one",
+                    categoryOne.value,
+                    carOne.value
+                );
+
+
+                updateVehicle(
+                    "two",
+                    categoryTwo.value,
+                    carTwo.value
+                );
+
+            }
+        );
+
+
+
+        /* =====================================================
+           INITIAL STATE
+        ====================================================== */
+
+        categoryOne.value = "luxury";
+
+        categoryTwo.value = "sports";
+
+
+        populateCars(
+            categoryOne,
+            carOne
+        );
+
+        populateCars(
+            categoryTwo,
+            carTwo
+        );
+
+
+        carOne.value =
+            "Mercedes-Benz S-Class";
+
+        carTwo.value =
+            "Porsche 911 GT3";
+
+
+        updateVehicle(
+            "one",
+            "luxury",
+            "Mercedes-Benz S-Class"
+        );
+
+
+        updateVehicle(
+            "two",
+            "sports",
+            "Porsche 911 GT3"
+        );
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,2042 @@
+/* =========================================================
+   SPORTS — CTRL+CAR AUTOMOTIVE ARCHIVE
+   FUTURISTIC / NEO-INDUSTRIAL
+========================================================= */
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+
+    --carbon: #080A0C;
+    --carbon-light: #101316;
+    --graphite: #171B1F;
+
+    --white: #F2F3F3;
+    --silver: #AEB4B8;
+    --muted: #737A7F;
+
+    --red: #E53935;
+    --red-bright: #FF443E;
+    --red-dark: #8F2422;
+
+    --line: rgba(242, 243, 243, 0.12);
+    --line-red: rgba(229, 57, 53, 0.45);
+
+    --space: "Space Grotesk", sans-serif;
+    --rajdhani: "Rajdhani", sans-serif;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    background: var(--carbon);
+
+    color: var(--white);
+
+    font-family: var(--space);
+
+    overflow-x: hidden;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+img {
+    display: block;
+    width: 100%;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.sports-page {
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 80% 10%,
+            rgba(229, 57, 53, 0.07),
+            transparent 28%
+        ),
+        var(--carbon);
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.sports-navbar {
+
+    position: absolute;
+
+    top: 22px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: calc(100% - 80px);
+
+    max-width: 1500px;
+
+    height: 72px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 28px;
+
+    border-bottom: 1px solid rgba(242, 243, 243, 0.12);
+
+    z-index: 20;
+}
+
+
+.sports-logo {
+
+    width: 135px;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.sports-logo img {
+
+    width: 135px;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* ---------- Navigation ---------- */
+
+.sports-nav {
+
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 48px;
+}
+
+
+.sports-nav a {
+
+    position: relative;
+
+    font-family: var(--rajdhani);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: rgba(242, 243, 243, 0.72);
+
+    transition: color 0.3s ease;
+}
+
+
+.sports-nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -9px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--red);
+
+    transition: width 0.3s ease;
+}
+
+
+.sports-nav a:hover {
+
+    color: var(--white);
+}
+
+
+.sports-nav a:hover::after {
+
+    width: 100%;
+}
+
+
+/* ---------- Status ---------- */
+
+.nav-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-family: var(--rajdhani);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: var(--muted);
+}
+
+
+.status-dot {
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: var(--red);
+
+    box-shadow: 0 0 12px rgba(229, 57, 53, 0.75);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.sports-hero {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    border-bottom: 1px solid var(--line);
+}
+
+
+/* ---------- Technical grid ---------- */
+
+.hero-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 80px 80px;
+
+    opacity: 0.35;
+
+    mask-image:
+        linear-gradient(
+            to right,
+            black,
+            transparent 85%
+        );
+}
+
+
+/* ---------- Red glow ---------- */
+
+.sports-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+
+    height: 600px;
+
+    right: -200px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: rgba(229, 57, 53, 0.07);
+
+    filter: blur(100px);
+
+    border-radius: 50%;
+}
+
+
+/* ---------- Hero content ---------- */
+
+.sports-hero-content {
+
+    position: relative;
+
+    z-index: 3;
+
+    margin-left: 9vw;
+
+    max-width: 850px;
+}
+
+
+.hero-index {
+
+    font-family: var(--rajdhani);
+
+    font-size: 13px;
+
+    letter-spacing: 5px;
+
+    color: var(--muted);
+
+    margin-bottom: 32px;
+}
+
+
+.hero-kicker {
+
+    font-family: var(--rajdhani);
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    letter-spacing: 5px;
+
+    color: var(--red);
+
+    margin-bottom: 22px;
+}
+
+
+.sports-hero h1 {
+
+    font-family: var(--rajdhani);
+
+    font-size: clamp(90px, 13vw, 210px);
+
+    line-height: 0.76;
+
+    font-weight: 700;
+
+    letter-spacing: -5px;
+
+    text-transform: uppercase;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.sports-hero h1 span {
+
+    color: var(--white);
+}
+
+
+.sports-hero h1 strong {
+
+    color: transparent;
+
+    -webkit-text-stroke: 2px rgba(242,243,243,0.65);
+
+    font-weight: 700;
+}
+
+
+.sports-hero-content > p {
+
+    max-width: 480px;
+
+    margin-top: 42px;
+
+    color: rgba(242,243,243,0.64);
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* ---------- Hero button ---------- */
+
+.hero-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 45px;
+
+    margin-top: 35px;
+
+    padding: 15px 20px;
+
+    border: 1px solid var(--line-red);
+
+    font-family: var(--rajdhani);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.hero-button b {
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    color: var(--red);
+}
+
+
+.hero-button:hover {
+
+    background: var(--red);
+
+    border-color: var(--red);
+
+    transform: translateX(6px);
+}
+
+
+.hero-button:hover b {
+
+    color: white;
+}
+
+
+/* ---------- Hero number ---------- */
+
+.hero-number {
+
+    position: absolute;
+
+    right: 8vw;
+
+    bottom: 12vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    font-family: var(--rajdhani);
+
+    z-index: 2;
+}
+
+
+.hero-number span {
+
+    font-size: 130px;
+
+    line-height: 0.8;
+
+    font-weight: 700;
+
+    color: rgba(242,243,243,0.035);
+
+    -webkit-text-stroke: 1px rgba(242,243,243,0.12);
+}
+
+
+.hero-number small {
+
+    margin-top: 15px;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    color: var(--red);
+}
+
+
+/* ---------- Technical information ---------- */
+
+.hero-technical {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 9vw;
+
+    display: flex;
+
+    gap: 45px;
+
+    font-family: var(--rajdhani);
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: rgba(242,243,243,0.35);
+
+    z-index: 3;
+}
+
+
+/* ---------- Decorative lines ---------- */
+
+.hero-line {
+
+    position: absolute;
+
+    height: 1px;
+
+    background: var(--red);
+
+    opacity: 0.4;
+}
+
+
+.hero-line-one {
+
+    width: 240px;
+
+    right: 0;
+
+    top: 32%;
+}
+
+
+.hero-line-two {
+
+    width: 120px;
+
+    right: 18%;
+
+    top: 70%;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.sports-intro {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 1fr 2fr 1fr;
+
+    gap: 50px;
+
+    padding: 130px 9vw;
+
+    border-bottom: 1px solid var(--line);
+}
+
+
+.intro-index {
+
+    font-family: var(--rajdhani);
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    color: var(--red);
+}
+
+
+.intro-content {
+
+    max-width: 750px;
+}
+
+
+.intro-label {
+
+    font-family: var(--rajdhani);
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    color: var(--muted);
+
+    margin-bottom: 18px;
+}
+
+
+.intro-content h2 {
+
+    font-family: var(--rajdhani);
+
+    font-size: clamp(60px, 8vw, 120px);
+
+    line-height: 0.85;
+
+    letter-spacing: -3px;
+
+    text-transform: uppercase;
+}
+
+
+.intro-content h2 span {
+
+    display: block;
+
+    color: var(--red);
+}
+
+
+.intro-description {
+
+    max-width: 520px;
+
+    margin-top: 35px;
+
+    color: var(--silver);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+.intro-meta {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    justify-content: flex-end;
+
+    font-family: var(--rajdhani);
+}
+
+
+.intro-meta span {
+
+    font-size: 80px;
+
+    font-weight: 700;
+
+    line-height: 0.8;
+
+    color: var(--white);
+}
+
+
+.intro-meta small {
+
+    margin-top: 10px;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   SPORTS CAR
+========================================================= */
+
+.sports-car {
+
+    position: relative;
+
+    min-height: 700px;
+
+    display: grid;
+
+    grid-template-columns: 58% 42%;
+
+    border-bottom: 1px solid var(--line);
+
+    overflow: hidden;
+}
+
+
+.sports-car.reverse {
+
+    grid-template-columns: 42% 58%;
+}
+
+
+.sports-car.reverse .car-image {
+
+    order: 2;
+}
+
+
+.sports-car.reverse .car-info {
+
+    order: 1;
+}
+
+
+/* =========================================================
+   CAR IMAGE
+========================================================= */
+
+.car-image {
+
+    position: relative;
+
+    min-height: 700px;
+
+    overflow: hidden;
+
+    background: var(--carbon-light);
+}
+
+
+.car-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 60%,
+            rgba(8,10,12,0.6)
+        );
+
+    pointer-events: none;
+}
+
+
+.sports-car.reverse .car-image::after {
+
+    background:
+        linear-gradient(
+            270deg,
+            transparent 60%,
+            rgba(8,10,12,0.6)
+        );
+}
+
+
+.car-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    filter:
+        brightness(0.78)
+        contrast(1.08)
+        saturate(1.05);
+
+    transition:
+        transform 0.8s cubic-bezier(.2,.7,.2,1),
+        filter 0.8s ease;
+}
+
+
+.sports-car:hover .car-image img {
+
+    transform: scale(1.045);
+
+    filter:
+        brightness(0.88)
+        contrast(1.12)
+        saturate(1.12);
+}
+
+
+/* ---------- Image number ---------- */
+
+.image-number {
+
+    position: absolute;
+
+    top: 35px;
+
+    left: 40px;
+
+    z-index: 2;
+
+    font-family: var(--rajdhani);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: var(--red);
+}
+
+
+/* ---------- Image label ---------- */
+
+.image-label {
+
+    position: absolute;
+
+    left: 40px;
+
+    bottom: 35px;
+
+    z-index: 2;
+
+    font-family: var(--rajdhani);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: rgba(242,243,243,0.65);
+
+}
+
+
+/* =========================================================
+   CAR INFORMATION
+========================================================= */
+
+.car-info {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 80px 7vw;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--carbon-light),
+            var(--carbon)
+        );
+}
+
+
+/* ---------- Top ---------- */
+
+.car-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid var(--line);
+}
+
+
+.car-category {
+
+    font-family: var(--rajdhani);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: var(--red);
+}
+
+
+.car-year {
+
+    font-family: var(--rajdhani);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: var(--muted);
+}
+
+
+/* ---------- Heading ---------- */
+
+.car-info h2 {
+
+    font-family: var(--rajdhani);
+
+    font-size: clamp(55px, 6vw, 95px);
+
+    line-height: 0.82;
+
+    letter-spacing: -2px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+
+.car-info h2 em {
+
+    display: block;
+
+    color: transparent;
+
+    -webkit-text-stroke: 1.5px rgba(242,243,243,0.55);
+
+    font-style: normal;
+}
+
+
+/* ---------- Description ---------- */
+
+.car-description {
+
+    max-width: 510px;
+
+    margin-top: 30px;
+
+    color: rgba(242,243,243,0.58);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   SPECIFICATIONS
+========================================================= */
+
+.car-specs {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 0;
+
+    margin-top: 45px;
+
+    border-top: 1px solid var(--line);
+
+    border-left: 1px solid var(--line);
+}
+
+
+.car-specs div {
+
+    min-height: 85px;
+
+    padding: 17px 18px;
+
+    border-right: 1px solid var(--line);
+
+    border-bottom: 1px solid var(--line);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.car-specs span {
+
+    font-family: var(--rajdhani);
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: var(--muted);
+
+    margin-bottom: 5px;
+}
+
+
+.car-specs strong {
+
+    font-family: var(--rajdhani);
+
+    font-size: 21px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    color: var(--white);
+}
+
+
+/* =========================================================
+   CAR FOOTER
+========================================================= */
+
+.car-footer {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 35px;
+}
+
+
+.car-footer > span {
+
+    font-family: var(--rajdhani);
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: var(--muted);
+}
+
+
+.car-footer a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    font-family: var(--rajdhani);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: var(--white);
+
+    transition: color 0.3s ease;
+}
+
+
+.car-footer a span {
+
+    color: var(--red);
+
+    font-size: 18px;
+
+    transition: transform 0.3s ease;
+}
+
+
+.car-footer a:hover {
+
+    color: var(--red);
+}
+
+
+.car-footer a:hover span {
+
+    transform: translate(4px, -4px);
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.sports-about {
+
+    position: relative;
+
+    min-height: 520px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 3fr 1fr;
+
+    align-items: center;
+
+    padding: 100px 9vw;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 70% 50%,
+            rgba(229,57,53,0.09),
+            transparent 35%
+        );
+}
+
+
+.about-number {
+
+    font-family: var(--rajdhani);
+
+    font-size: 150px;
+
+    font-weight: 700;
+
+    color: transparent;
+
+    -webkit-text-stroke: 1px rgba(242,243,243,0.08);
+}
+
+
+.about-content {
+
+    max-width: 700px;
+}
+
+
+.about-label {
+
+    font-family: var(--rajdhani);
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    color: var(--red);
+}
+
+
+.about-content h2 {
+
+    margin-top: 20px;
+
+    font-family: var(--rajdhani);
+
+    font-size: clamp(55px, 7vw, 105px);
+
+    line-height: 0.85;
+
+    letter-spacing: -3px;
+
+    text-transform: uppercase;
+}
+
+
+.about-content h2 span {
+
+    display: block;
+
+    color: transparent;
+
+    -webkit-text-stroke: 1.5px rgba(242,243,243,0.5);
+}
+
+
+.about-content p {
+
+    max-width: 520px;
+
+    margin-top: 30px;
+
+    color: var(--silver);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* ---------- About mark ---------- */
+
+.about-mark {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-family: var(--rajdhani);
+
+    font-size: 40px;
+
+    font-weight: 700;
+
+    color: rgba(242,243,243,0.15);
+}
+
+
+.about-mark strong {
+
+    color: var(--red);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.sports-footer {
+
+    min-height: 120px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    align-items: center;
+
+    padding: 0 9vw;
+
+    border-top: 1px solid var(--line);
+
+    background: #060708;
+}
+
+
+.footer-brand img {
+
+    width: 110px;
+}
+
+
+.footer-text {
+
+    text-align: center;
+
+    font-family: var(--rajdhani);
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: var(--muted);
+}
+
+
+.sports-footer > a {
+
+    justify-self: end;
+
+    font-family: var(--rajdhani);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: var(--silver);
+
+    transition: color 0.3s ease;
+}
+
+
+.sports-footer > a span {
+
+    margin-left: 10px;
+
+    color: var(--red);
+}
+
+
+.sports-footer > a:hover {
+
+    color: var(--red);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .sports-navbar {
+
+        width: calc(100% - 35px);
+
+        padding: 0 18px;
+    }
+
+
+    .sports-nav {
+
+        gap: 22px;
+    }
+
+
+    .nav-status {
+
+        display: none;
+    }
+
+
+    .sports-hero-content {
+
+        margin-left: 7vw;
+    }
+
+
+    .sports-intro {
+
+        grid-template-columns: 1fr;
+
+        padding: 100px 7vw;
+    }
+
+
+    .intro-meta {
+
+        align-items: flex-start;
+    }
+
+
+    .sports-car,
+    .sports-car.reverse {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .sports-car.reverse .car-image {
+
+        order: 1;
+    }
+
+
+    .sports-car.reverse .car-info {
+
+        order: 2;
+    }
+
+
+    .car-image {
+
+        min-height: 60vw;
+    }
+
+
+    .car-info {
+
+        padding: 70px 7vw;
+    }
+
+
+    .sports-about {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 90px 7vw;
+    }
+
+
+    .about-number {
+
+        font-size: 100px;
+    }
+
+
+    .about-mark {
+
+        justify-content: flex-start;
+    }
+
+
+    .sports-footer {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding: 40px 7vw;
+    }
+
+
+    .footer-text {
+
+        text-align: left;
+    }
+
+
+    .sports-footer > a {
+
+        justify-self: start;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .sports-navbar {
+
+        top: 10px;
+
+        height: 65px;
+    }
+
+
+    .sports-logo,
+    .sports-logo img {
+
+        width: 105px;
+    }
+
+
+    .sports-nav {
+
+        position: static;
+
+        transform: none;
+
+        margin-left: auto;
+
+        gap: 18px;
+    }
+
+
+    .sports-nav a {
+
+        font-size: 11px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .sports-hero {
+
+        min-height: 850px;
+    }
+
+
+    .sports-hero-content {
+
+        margin-left: 7vw;
+
+        margin-right: 7vw;
+    }
+
+
+    .sports-hero h1 {
+
+        font-size: 76px;
+
+        letter-spacing: -2px;
+    }
+
+
+    .sports-hero-content > p {
+
+        font-size: 14px;
+    }
+
+
+    .hero-number {
+
+        right: 7vw;
+
+        bottom: 100px;
+    }
+
+
+    .hero-number span {
+
+        font-size: 80px;
+    }
+
+
+    .hero-technical {
+
+        left: 7vw;
+
+        gap: 15px;
+
+        font-size: 8px;
+    }
+
+
+    .sports-intro {
+
+        padding: 80px 7vw;
+    }
+
+
+    .intro-content h2 {
+
+        font-size: 65px;
+    }
+
+
+    .car-image {
+
+        min-height: 70vw;
+    }
+
+
+    .car-info h2 {
+
+        font-size: 58px;
+    }
+
+
+    .car-specs {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .car-footer {
+
+        align-items: flex-start;
+
+        gap: 20px;
+
+        flex-direction: column;
+    }
+
+
+    .sports-about {
+
+        min-height: 500px;
+    }
+
+}
+
+/* =========================================================
+   SPORTS DETAILS BUTTON
+   ========================================================= */
+
+.sports-details-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 28px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #F4F6F7;
+
+    font-family: var(--font-body, "Rajdhani", sans-serif);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-decoration: underline;
+
+    text-decoration-thickness: 1px;
+
+    text-underline-offset: 6px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.sports-details-button .button-arrow {
+
+    font-size: 18px;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.sports-details-button:hover {
+
+    color: #FF5A36;
+
+}
+
+
+.sports-details-button:hover .button-arrow {
+
+    transform: translateX(6px);
+
+}
+
+
+/* =========================================================
+   SPORTS DETAILS MODAL
+   ========================================================= */
+
+body.sports-modal-open {
+
+    overflow: hidden;
+
+}
+
+
+.sports-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    visibility: hidden;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+}
+
+
+.sports-modal.active {
+
+    visibility: visible;
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+}
+
+
+.sports-modal-backdrop {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(2, 7, 11, 0.88);
+
+    backdrop-filter: blur(14px);
+
+    -webkit-backdrop-filter: blur(14px);
+
+}
+
+
+.sports-modal-window {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1050px, 92vw);
+
+    max-height: 90vh;
+
+    overflow: hidden;
+
+    display: grid;
+
+    grid-template-columns: 1.05fr 0.95fr;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(17, 27, 34, 0.97),
+            rgba(7, 15, 21, 0.98)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 35px 100px rgba(0, 0, 0, 0.65);
+
+    transform:
+        translateY(25px)
+        scale(0.97);
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+.sports-modal.active .sports-modal-window {
+
+    transform:
+        translateY(0)
+        scale(1);
+
+}
+
+
+/* ---------- Modal Image ---------- */
+
+.sports-modal-image {
+
+    min-height: 520px;
+
+    overflow: hidden;
+
+    background: #050A0E;
+
+}
+
+
+.sports-modal-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+/* ---------- Modal Content ---------- */
+
+.sports-modal-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 65px;
+
+}
+
+
+.sports-modal-content > span {
+
+    margin-bottom: 18px;
+
+    color: #FF5A36;
+
+    font-family:
+        var(--font-body, "Rajdhani", sans-serif);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+}
+
+
+.sports-modal-content h2 {
+
+    margin: 0 0 25px;
+
+    color: #F5F6F7;
+
+    font-family:
+        var(--font-display, "Rajdhani", sans-serif);
+
+    font-size: clamp(38px, 4vw, 65px);
+
+    line-height: 0.95;
+
+    letter-spacing: -2px;
+
+    text-transform: uppercase;
+
+}
+
+
+.sports-modal-content p {
+
+    margin: 0 0 40px;
+
+    max-width: 500px;
+
+    color: rgba(235, 240, 242, 0.68);
+
+    font-family:
+        var(--font-body, "Rajdhani", sans-serif);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+}
+
+
+/* ---------- Modal Specifications ---------- */
+
+.sports-modal-specs {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.12);
+
+}
+
+
+.sports-modal-specs > div {
+
+    padding: 18px 15px 18px 0;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+
+}
+
+
+.sports-modal-specs span {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: rgba(235, 240, 242, 0.42);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.sports-modal-specs strong {
+
+    color: #F3F5F6;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* ---------- Close ---------- */
+
+.sports-modal-close {
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 20px;
+
+    z-index: 5;
+
+    width: 42px;
+
+    height: 42px;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    background:
+        rgba(5, 10, 14, 0.55);
+
+    color: #FFFFFF;
+
+    font-size: 25px;
+
+    font-weight: 300;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.sports-modal-close:hover {
+
+    background: #FF5A36;
+
+    border-color: #FF5A36;
+
+}
+
+
+/* =========================================================
+   SPORTS MODAL RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .sports-modal {
+
+        padding: 15px;
+
+    }
+
+
+    .sports-modal-window {
+
+        grid-template-columns: 1fr;
+
+        max-height: 92vh;
+
+        overflow-y: auto;
+
+    }
+
+
+    .sports-modal-image {
+
+        min-height: 300px;
+
+        max-height: 380px;
+
+    }
+
+
+    .sports-modal-content {
+
+        padding: 40px 30px;
+
+    }
+
+
+    .sports-modal-content h2 {
+
+        font-size: 42px;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .sports-modal-content {
+
+        padding: 30px 22px;
+
+    }
+
+
+    .sports-modal-specs {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .sports-modal-image {
+
+        min-height: 250px;
+
+    }
+
+}

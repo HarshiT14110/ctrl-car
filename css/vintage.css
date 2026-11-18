@@ -1,0 +1,1989 @@
+/* =========================================================
+   
+ — VINTAGE COLLECTION
+   Editorial / Heritage / Classic
+   ========================================================= */
+
+
+/* =========================================================
+   ROOT
+   ========================================================= */
+
+.vintage-page {
+
+    --vintage-ink: #241D18;
+    --vintage-dark: #18130F;
+
+    --vintage-brown: #4A3527;
+    --vintage-brown-light: #705441;
+
+    --vintage-cream: #E9E0D2;
+    --vintage-paper: #F1EBE1;
+
+    --vintage-brass: #A8895B;
+    --vintage-brass-light: #C7AD7D;
+
+    --vintage-muted: #76695D;
+
+    background: var(--vintage-paper);
+
+    color: var(--vintage-ink);
+
+    font-family: "Inter", sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+.vintage-page body {
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   VINTAGE NAVBAR
+   ========================================================= */
+
+.vintage-navbar {
+    position: relative;
+    z-index: 100;
+
+    width: calc(100% - 10vw);
+    height: 80px;
+
+    margin: 20px auto 0;
+
+    padding: 0 28px;
+
+    display: flex;
+    align-items: center;
+
+    background: rgba(250, 247, 240, 0.88);
+
+    border: 1px solid rgba(91, 70, 49, 0.18);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(65, 48, 32, 0.06);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-sizing: border-box;
+}
+
+
+/* ---------- Logo ---------- */
+
+.vintage-logo {
+    width: 190px;
+
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+}
+
+.vintage-logo img {
+    display: block;
+
+    width: 125px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* ---------- Navigation ---------- */
+
+.vintage-nav-links {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 52px;
+}
+
+.vintage-nav-links a {
+    position: relative;
+
+    color: #44382D;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: 2.2px;
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.vintage-nav-links a:hover {
+    color: #8A6545;
+}
+
+
+/* ---------- Smooth section scrolling ---------- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 700px) {
+
+    .vintage-navbar {
+        width: calc(100% - 40px);
+        height: 70px;
+
+        padding: 0 20px;
+    }
+
+    .vintage-logo {
+        width: 150px;
+    }
+
+    .vintage-nav-links {
+        gap: 22px;
+    }
+
+    .vintage-nav-links a {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.vintage-hero {
+
+    min-height: 100vh;
+
+    padding: 150px 5vw 90px;
+
+    box-sizing: border-box;
+
+    display: grid;
+
+    grid-template-columns: 0.85fr 1.15fr;
+
+    gap: 6vw;
+
+    align-items: center;
+
+    background:
+
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(168, 137, 91, 0.10),
+            transparent 35%
+        ),
+
+        var(--vintage-paper);
+}
+
+
+/* ---------- Hero left ---------- */
+
+.hero-left {
+
+    max-width: 590px;
+
+    padding-left: 4vw;
+}
+
+
+.hero-index {
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: var(--vintage-muted);
+
+    margin-bottom: 18px;
+}
+
+
+.hero-line {
+
+    width: 70px;
+
+    height: 1px;
+
+    background: var(--vintage-brass);
+
+    margin-bottom: 42px;
+}
+
+
+.hero-kicker {
+
+    margin: 0 0 18px;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: var(--vintage-brown-light);
+
+    font-weight: 600;
+}
+
+
+.hero-left h1 {
+
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(72px, 8vw, 132px);
+
+    font-weight: 500;
+
+    line-height: 0.82;
+
+    letter-spacing: -5px;
+
+    color: var(--vintage-ink);
+}
+
+
+.hero-left h1 em {
+
+    font-weight: 400;
+
+    color: var(--vintage-brown-light);
+}
+
+
+.hero-description {
+
+    max-width: 440px;
+
+    margin: 42px 0 35px;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    color: var(--vintage-muted);
+
+    font-weight: 300;
+}
+
+
+/* ---------- Hero link ---------- */
+
+.hero-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    color: var(--vintage-ink);
+
+    text-decoration: none;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid var(--vintage-brass);
+
+    transition: gap 0.3s ease;
+}
+
+
+.hero-link span {
+
+    font-size: 17px;
+
+    line-height: 10px;
+}
+
+
+.hero-link:hover {
+
+    gap: 32px;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+   ========================================================= */
+
+.hero-right {
+
+    height: 70vh;
+
+    min-height: 560px;
+}
+
+
+.hero-image-frame {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100%;
+
+    overflow: hidden;
+
+    background: var(--vintage-dark);
+}
+
+
+.hero-image-frame::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 18px;
+
+    border: 1px solid rgba(241, 235, 225, 0.38);
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+.hero-image-frame img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    filter:
+
+        sepia(0.12)
+
+        saturate(0.82)
+
+        contrast(1.04)
+
+        brightness(0.88);
+
+    transform: scale(1.02);
+
+    transition:
+
+        transform 1s ease,
+
+        filter 1s ease;
+}
+
+
+.hero-image-frame:hover img {
+
+    transform: scale(1.05);
+
+    filter:
+
+        sepia(0.08)
+
+        saturate(0.90)
+
+        contrast(1.05)
+
+        brightness(0.94);
+}
+
+
+.hero-image-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(24, 19, 15, 0.08),
+            rgba(24, 19, 15, 0.18)
+        );
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+.hero-image-caption {
+
+    position: absolute;
+
+    left: 38px;
+
+    right: 38px;
+
+    bottom: 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: #F1EBE1;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+   ========================================================= */
+
+.vintage-intro {
+
+    padding: 125px 10vw;
+
+    display: grid;
+
+    grid-template-columns: 0.25fr 0.75fr 1fr;
+
+    gap: 60px;
+
+    border-top: 1px solid rgba(74, 53, 39, 0.18);
+
+    border-bottom: 1px solid rgba(74, 53, 39, 0.18);
+
+    background: #E4DACB;
+}
+
+
+.intro-number {
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: var(--vintage-brass);
+}
+
+
+.intro-title {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.intro-title span {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: var(--vintage-muted);
+}
+
+
+.intro-title strong {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(38px, 4vw, 62px);
+
+    font-weight: 500;
+
+    line-height: 0.95;
+
+    color: var(--vintage-ink);
+}
+
+
+.intro-copy {
+
+    max-width: 480px;
+}
+
+
+.intro-copy p {
+
+    margin: 0 0 22px;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    color: var(--vintage-muted);
+
+    font-weight: 300;
+}
+
+
+.intro-copy p:last-child {
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   COLLECTION SECTION
+   ========================================================= */
+
+.vintage-collection {
+
+    padding: 140px 7vw 120px;
+
+    background: var(--vintage-paper);
+}
+
+
+.collection-heading {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 60px;
+
+    margin-bottom: 90px;
+
+    padding: 0 3vw;
+}
+
+
+.section-number {
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: var(--vintage-brass);
+}
+
+
+.collection-heading h2 {
+
+    margin: 18px 0 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(65px, 8vw, 120px);
+
+    font-weight: 500;
+
+    line-height: 0.75;
+
+    letter-spacing: -4px;
+
+    color: var(--vintage-ink);
+}
+
+
+.collection-heading h2 em {
+
+    color: var(--vintage-brown-light);
+
+    font-weight: 400;
+}
+
+
+.collection-heading > p {
+
+    max-width: 280px;
+
+    margin: 0 0 5px;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    color: var(--vintage-muted);
+}
+
+
+/* =========================================================
+   CAR CARD
+   ========================================================= */
+
+.vintage-car-card {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 1.15fr 0.85fr;
+
+    min-height: 580px;
+
+    margin-bottom: 90px;
+
+    background: #DDD2C1;
+
+    border: 1px solid rgba(74, 53, 39, 0.16);
+
+    overflow: hidden;
+
+    transition:
+
+        transform 0.5s ease,
+
+        box-shadow 0.5s ease;
+}
+
+
+.vintage-car-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 25px 70px rgba(36, 29, 24, 0.13);
+}
+
+
+/* ---------- Reverse cards ---------- */
+
+.vintage-car-card.reverse {
+
+    grid-template-columns: 0.85fr 1.15fr;
+}
+
+
+.vintage-car-card.reverse .car-image {
+
+    order: 2;
+}
+
+
+.vintage-car-card.reverse .car-information {
+
+    order: 1;
+}
+
+
+/* ---------- Card number ---------- */
+
+.car-number {
+
+    position: absolute;
+
+    top: 24px;
+
+    left: 26px;
+
+    z-index: 5;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: rgba(241, 235, 225, 0.85);
+
+    mix-blend-mode: difference;
+}
+
+
+/* =========================================================
+   CAR IMAGE
+   ========================================================= */
+
+.car-image {
+
+    position: relative;
+
+    min-height: 580px;
+
+    overflow: hidden;
+
+    background: #28211B;
+}
+
+
+.car-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(24, 19, 15, 0.08),
+            rgba(24, 19, 15, 0)
+        );
+
+    pointer-events: none;
+}
+
+
+.car-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    filter:
+
+        sepia(0.08)
+
+        saturate(0.88)
+
+        contrast(1.03)
+
+        brightness(0.90);
+
+    transition:
+
+        transform 0.8s ease,
+
+        filter 0.8s ease;
+}
+
+
+.vintage-car-card:hover .car-image img {
+
+    transform: scale(1.035);
+
+    filter:
+
+        sepia(0.04)
+
+        saturate(0.96)
+
+        contrast(1.04)
+
+        brightness(0.96);
+}
+
+
+.image-number {
+
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 28px;
+
+    z-index: 3;
+
+    color: rgba(241, 235, 225, 0.75);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   CAR INFORMATION
+   ========================================================= */
+
+.car-information {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding: 70px 60px 55px;
+
+    box-sizing: border-box;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.15),
+            transparent 45%
+        ),
+
+        #E5DAC9;
+}
+
+
+.car-top {
+
+    border-bottom: 1px solid rgba(74, 53, 39, 0.20);
+
+    padding-bottom: 28px;
+}
+
+
+.car-era {
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: var(--vintage-brass);
+
+    display: block;
+
+    margin-bottom: 18px;
+}
+
+
+.car-information h3 {
+
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(46px, 4vw, 68px);
+
+    line-height: 0.85;
+
+    font-weight: 500;
+
+    letter-spacing: -2px;
+
+    color: var(--vintage-ink);
+}
+
+
+.car-subtitle {
+
+    max-width: 370px;
+
+    margin: 20px 0 0;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: var(--vintage-muted);
+
+    font-weight: 300;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.car-description {
+
+    margin: 30px 0;
+}
+
+
+.car-description p {
+
+    max-width: 410px;
+
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.85;
+
+    color: #66594D;
+
+    font-weight: 300;
+}
+
+
+/* =========================================================
+   SPECIFICATIONS
+   ========================================================= */
+
+.car-specifications {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    border-top: 1px solid rgba(74, 53, 39, 0.18);
+
+    border-bottom: 1px solid rgba(74, 53, 39, 0.18);
+}
+
+
+.car-specifications div {
+
+    padding: 18px 15px 18px 0;
+}
+
+
+.car-specifications div:nth-child(odd) {
+
+    border-right: 1px solid rgba(74, 53, 39, 0.18);
+
+    padding-right: 20px;
+}
+
+
+.car-specifications div:nth-child(even) {
+
+    padding-left: 20px;
+}
+
+
+.car-specifications div:nth-child(-n+2) {
+
+    border-bottom: 1px solid rgba(74, 53, 39, 0.18);
+}
+
+
+.car-specifications span {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: var(--vintage-muted);
+}
+
+
+.car-specifications strong {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+    color: var(--vintage-ink);
+}
+
+
+/* =========================================================
+   DETAILS BUTTON
+   ========================================================= */
+
+.vintage-details-button {
+
+    align-self: flex-start;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 30px;
+
+    padding: 0 0 9px;
+
+    border: none;
+
+    border-bottom: 1px solid var(--vintage-brass);
+
+    background: transparent;
+
+    color: var(--vintage-ink);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition:
+
+        gap 0.3s ease,
+
+        color 0.3s ease;
+}
+
+
+.vintage-details-button:hover {
+
+    gap: 28px;
+
+    color: var(--vintage-brown-light);
+}
+
+
+.button-arrow {
+
+    font-size: 16px;
+
+    line-height: 8px;
+
+    color: var(--vintage-brass);
+}
+
+
+/* =========================================================
+   HERITAGE QUOTE
+   ========================================================= */
+
+.heritage-quote {
+
+    padding: 170px 20px;
+
+    text-align: center;
+
+    background: var(--vintage-dark);
+
+    color: var(--vintage-paper);
+}
+
+
+.quote-line {
+
+    width: 80px;
+
+    height: 1px;
+
+    margin: 0 auto 35px;
+
+    background: var(--vintage-brass);
+}
+
+
+.quote-small {
+
+    margin: 0 0 35px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: var(--vintage-brass-light);
+}
+
+
+.heritage-quote h2 {
+
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(65px, 9vw, 140px);
+
+    line-height: 0.78;
+
+    font-weight: 400;
+
+    letter-spacing: -5px;
+}
+
+
+.heritage-quote h2 em {
+
+    color: var(--vintage-brass-light);
+
+    font-weight: 400;
+}
+
+
+.quote-description {
+
+    margin: 40px 0 35px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 25px;
+
+    color: rgba(241, 235, 225, 0.65);
+}
+
+
+.heritage-quote .quote-line:last-child {
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.vintage-cta {
+
+    padding: 140px 10vw;
+
+    background:
+
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(168, 137, 91, 0.15),
+            transparent 35%
+        ),
+
+        #D9CEBD;
+}
+
+
+.cta-content {
+
+    max-width: 850px;
+}
+
+
+.cta-content > span {
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: var(--vintage-muted);
+}
+
+
+.cta-content h2 {
+
+    margin: 30px 0 45px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(65px, 9vw, 135px);
+
+    line-height: 0.75;
+
+    font-weight: 500;
+
+    letter-spacing: -5px;
+
+    color: var(--vintage-ink);
+}
+
+
+.cta-content h2 em {
+
+    color: var(--vintage-brown-light);
+
+    font-weight: 400;
+}
+
+
+.cta-content a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid var(--vintage-brass);
+
+    text-decoration: none;
+
+    color: var(--vintage-ink);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    transition: gap 0.3s ease;
+}
+
+
+.cta-content a:hover {
+
+    gap: 32px;
+}
+
+
+.cta-content a span {
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+body.modal-open {
+
+    overflow: hidden;
+}
+
+
+.vintage-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    visibility: hidden;
+
+    opacity: 0;
+
+    z-index: 2000;
+
+    transition:
+
+        opacity 0.35s ease,
+
+        visibility 0.35s ease;
+}
+
+
+.vintage-modal.active {
+
+    visibility: visible;
+
+    opacity: 1;
+}
+
+
+.modal-backdrop {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(20, 15, 11, 0.76);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+}
+
+
+.modal-window {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.85fr;
+
+    width: min(1050px, 92vw);
+
+    max-height: 88vh;
+
+    overflow: hidden;
+
+    background: var(--vintage-paper);
+
+    box-shadow:
+        0 35px 100px rgba(0,0,0,0.35);
+
+    transform: translateY(30px) scale(0.97);
+
+    transition: transform 0.4s ease;
+
+    z-index: 2;
+}
+
+
+.vintage-modal.active .modal-window {
+
+    transform: translateY(0) scale(1);
+}
+
+
+/* ---------- Modal image ---------- */
+
+.modal-image {
+
+    min-height: 580px;
+
+    background: var(--vintage-dark);
+
+    overflow: hidden;
+}
+
+
+.modal-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    filter:
+
+        sepia(0.08)
+
+        saturate(0.88)
+
+        contrast(1.04);
+}
+
+
+/* ---------- Modal content ---------- */
+
+.modal-content {
+
+    padding: 70px 55px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    background: #E7DDCE;
+}
+
+
+.modal-content > span {
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: var(--vintage-brass);
+
+    margin-bottom: 20px;
+}
+
+
+.modal-content h2 {
+
+    margin: 0 0 30px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(48px, 5vw, 70px);
+
+    line-height: 0.85;
+
+    font-weight: 500;
+
+    letter-spacing: -2px;
+
+    color: var(--vintage-ink);
+}
+
+
+.modal-content > p {
+
+    margin: 0 0 40px;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color: var(--vintage-muted);
+
+    font-weight: 300;
+}
+
+
+/* ---------- Modal specs ---------- */
+
+.modal-specs {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    border-top: 1px solid rgba(74, 53, 39, 0.18);
+}
+
+
+.modal-specs div {
+
+    padding: 17px 10px 17px 0;
+}
+
+
+.modal-specs div:nth-child(odd) {
+
+    border-right: 1px solid rgba(74, 53, 39, 0.18);
+}
+
+
+.modal-specs div:nth-child(-n+2) {
+
+    border-bottom: 1px solid rgba(74, 53, 39, 0.18);
+}
+
+
+.modal-specs div:nth-child(even) {
+
+    padding-left: 18px;
+}
+
+
+.modal-specs span {
+
+    display: block;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: var(--vintage-muted);
+
+    margin-bottom: 7px;
+}
+
+
+.modal-specs strong {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    color: var(--vintage-ink);
+}
+
+
+/* ---------- Close ---------- */
+
+.modal-close {
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 20px;
+
+    z-index: 5;
+
+    width: 40px;
+
+    height: 40px;
+
+    border: 1px solid rgba(241, 235, 225, 0.45);
+
+    background: rgba(24, 19, 15, 0.55);
+
+    color: #F1EBE1;
+
+    font-size: 25px;
+
+    font-weight: 300;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+
+        background 0.3s ease,
+
+        color 0.3s ease;
+}
+
+
+.modal-close:hover {
+
+    background: var(--vintage-brass);
+
+    color: var(--vintage-dark);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.vintage-footer {
+
+    padding: 70px 7vw 35px;
+
+    background: #17120E;
+
+    color: var(--vintage-paper);
+}
+
+
+.footer-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 18px;
+
+    letter-spacing: 2px;
+}
+
+
+.footer-logo strong {
+
+    color: var(--vintage-brass-light);
+
+    font-weight: 400;
+}
+
+
+.vintage-footer > p {
+
+    max-width: 300px;
+
+    margin: 25px 0 80px;
+
+    color: rgba(241, 235, 225, 0.55);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+
+    line-height: 1.3;
+}
+
+
+.footer-bottom {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    padding-top: 22px;
+
+    border-top: 1px solid rgba(241, 235, 225, 0.15);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: rgba(241, 235, 225, 0.45);
+}
+
+
+.footer-bottom:nth-child(2) {
+
+    text-align: center;
+}
+
+
+.footer-bottom a {
+
+    text-align: right;
+
+    color: var(--vintage-paper);
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .vintage-nav {
+
+        gap: 20px;
+    }
+
+
+    .nav-number {
+
+        display: none;
+    }
+
+
+    .vintage-hero {
+
+        grid-template-columns: 1fr;
+
+        padding-top: 130px;
+    }
+
+
+    .hero-left {
+
+        padding-left: 0;
+
+        max-width: 700px;
+    }
+
+
+    .hero-right {
+
+        height: 60vh;
+
+        min-height: 450px;
+    }
+
+
+    .vintage-intro {
+
+        grid-template-columns: 0.2fr 0.8fr;
+
+        gap: 40px;
+    }
+
+
+    .intro-copy {
+
+        grid-column: 2;
+    }
+
+
+    .vintage-car-card,
+    .vintage-car-card.reverse {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .vintage-car-card.reverse .car-image,
+    .vintage-car-card.reverse .car-information {
+
+        order: initial;
+    }
+
+
+    .car-image {
+
+        min-height: 500px;
+    }
+
+
+    .car-information {
+
+        padding: 55px;
+    }
+
+
+    .modal-window {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .modal-image {
+
+        min-height: 320px;
+
+        max-height: 40vh;
+    }
+
+
+    .modal-content {
+
+        padding: 45px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .vintage-navbar {
+
+        height: 70px;
+
+        padding: 0 20px;
+    }
+
+
+    .vintage-nav {
+
+        display: none;
+    }
+
+
+    .vintage-hero {
+
+        padding: 110px 22px 60px;
+    }
+
+
+    .hero-left h1 {
+
+        font-size: 70px;
+
+        letter-spacing: -3px;
+    }
+
+
+    .hero-right {
+
+        height: 55vh;
+
+        min-height: 380px;
+    }
+
+
+    .hero-image-frame::before {
+
+        inset: 12px;
+    }
+
+
+    .hero-image-caption {
+
+        left: 22px;
+
+        right: 22px;
+    }
+
+
+    .vintage-intro {
+
+        padding: 80px 25px;
+
+        display: block;
+    }
+
+
+    .intro-number {
+
+        margin-bottom: 30px;
+    }
+
+
+    .intro-title {
+
+        margin-bottom: 35px;
+    }
+
+
+    .vintage-collection {
+
+        padding: 90px 18px;
+    }
+
+
+    .collection-heading {
+
+        display: block;
+
+        padding: 0 10px;
+
+        margin-bottom: 60px;
+    }
+
+
+    .collection-heading h2 {
+
+        font-size: 75px;
+    }
+
+
+    .collection-heading > p {
+
+        margin-top: 35px;
+    }
+
+
+    .vintage-car-card {
+
+        margin-bottom: 55px;
+    }
+
+
+    .car-image {
+
+        min-height: 320px;
+    }
+
+
+    .car-information {
+
+        padding: 45px 28px;
+    }
+
+
+    .car-information h3 {
+
+        font-size: 48px;
+    }
+
+
+    .car-specifications {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .heritage-quote {
+
+        padding: 110px 25px;
+    }
+
+
+    .heritage-quote h2 {
+
+        font-size: 72px;
+
+        letter-spacing: -3px;
+    }
+
+
+    .vintage-cta {
+
+        padding: 100px 25px;
+    }
+
+
+    .cta-content h2 {
+
+        font-size: 75px;
+
+        letter-spacing: -3px;
+    }
+
+
+    .vintage-modal {
+
+        padding: 15px;
+    }
+
+
+    .modal-window {
+
+        width: 100%;
+
+        max-height: 94vh;
+
+        overflow-y: auto;
+    }
+
+
+    .modal-image {
+
+        height: 250px;
+
+        min-height: 250px;
+    }
+
+
+    .modal-content {
+
+        padding: 35px 25px;
+    }
+
+
+    .modal-content h2 {
+
+        font-size: 48px;
+    }
+
+
+    .footer-bottom {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .footer-bottom:nth-child(2) {
+
+        text-align: left;
+    }
+
+
+    .footer-bottom a {
+
+        text-align: left;
+    }
+
+}
+/* ---------- About scroll position ---------- */
+
+#vintage-about {
+    scroll-margin-top: -40px;
+}
+/* ---------- CTA Logo ---------- */
+
+.vintage-cta .cta-logo {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.vintage-cta .cta-logo img {
+    width: 130px;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}

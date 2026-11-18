@@ -1,0 +1,1571 @@
+/* =========================================================
+   CTRL+CAR
+   Main Website Stylesheet
+   ========================================================= */
+
+
+/* =========================================================
+   01. ROOT VARIABLES
+   ========================================================= */
+
+:root {
+
+    /* ---------- Main Brand ---------- */
+
+    --ctrl-black: #0B0D0F;
+    --ctrl-off-white: #F2F0EB;
+    --ctrl-steel: #7D8288;
+    --ctrl-silver: #C8CBD0;
+
+
+    /* ---------- Luxury ---------- */
+
+    --luxury-midnight: #0B1014;
+    --luxury-champagne: #D6C3A5;
+    --luxury-frost: #E8ECEB;
+    --luxury-blue-grey: #8E9BA3;
+
+
+    /* ---------- Vintage ---------- */
+
+    --vintage-ivory: #F1E8D5;
+    --vintage-burgundy: #541F25;
+    --vintage-tobacco: #795A43;
+    --vintage-ink: #1C1A17;
+    --vintage-gold: #B39A6A;
+
+
+    /* ---------- Sports ---------- */
+
+    --sports-carbon: #090A0B;
+    --sports-graphite: #17191C;
+    --sports-white: #F5F5F2;
+    --sports-red: #E32929;
+    --sports-metal: #85898D;
+
+
+    /* ---------- Fonts ---------- */
+
+    --font-main: "Space Grotesk", sans-serif;
+    --font-luxury: "DM Serif Display", serif;
+    --font-vintage: "Cormorant Garamond", serif;
+    --font-sports: "Rajdhani", sans-serif;
+
+
+    /* ---------- General ---------- */
+
+    --transition-fast: 0.25s ease;
+    --transition-medium: 0.5s ease;
+    --transition-slow: 0.8s ease;
+}
+
+
+/* =========================================================
+   02. GLOBAL RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: var(--font-main);
+    background: var(--ctrl-black);
+    color: var(--ctrl-off-white);
+    overflow-x: hidden;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+::selection {
+    background: var(--luxury-champagne);
+    color: var(--ctrl-black);
+}
+
+
+/* =========================================================
+   03. NAVBAR
+   ========================================================= */
+
+.ctrl-navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    padding: 24px 0;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(5, 7, 9, 0.75),
+        rgba(5, 7, 9, 0)
+    );
+
+    transition: var(--transition-medium);
+}
+
+
+/*
+   The main CTRL+CAR logo is intentionally
+   centered in the hero.
+
+   Therefore the small navbar logo is hidden.
+   The navbar itself remains underneath the
+   centered branding.
+*/
+
+.ctrl-navbar .navbar-brand {
+    display: none;
+}
+
+
+.ctrl-navbar .navbar-collapse {
+    justify-content: center;
+}
+
+
+.ctrl-navbar .navbar-nav {
+    gap: 8px;
+    align-items: center;
+}
+
+
+.ctrl-navbar .nav-link {
+    position: relative;
+
+    padding: 8px 14px !important;
+
+    color: rgba(242, 240, 235, 0.72);
+
+    font-family: var(--font-main);
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 1.8px;
+
+    transition: var(--transition-fast);
+}
+
+
+.ctrl-navbar .nav-link:hover,
+.ctrl-navbar .nav-link.active {
+    color: var(--ctrl-off-white);
+}
+
+
+.ctrl-navbar .nav-link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 14px;
+    right: 14px;
+    bottom: 2px;
+
+    height: 1px;
+
+    background: var(--ctrl-off-white);
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: transform var(--transition-fast);
+}
+
+
+.ctrl-navbar .nav-link:hover::after,
+.ctrl-navbar .nav-link.active::after {
+    transform: scaleX(1);
+}
+
+
+/* ---------- Navbar CTA ---------- */
+
+.navbar-cta {
+    position: absolute;
+    right: 48px;
+}
+
+
+.nav-test-drive {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 10px 18px;
+
+    border: 1px solid rgba(242, 240, 235, 0.4);
+
+    color: var(--ctrl-off-white);
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    transition: var(--transition-fast);
+}
+
+
+.nav-test-drive:hover {
+    background: var(--ctrl-off-white);
+    color: var(--ctrl-black);
+
+    border-color: var(--ctrl-off-white);
+}
+
+
+/* ---------- Mobile Toggle ---------- */
+
+.navbar-toggler {
+    border: 1px solid rgba(242, 240, 235, 0.4);
+
+    padding: 8px 10px;
+
+    box-shadow: none !important;
+}
+
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+/* =========================================================
+   04. BRAND INTRO / HERO
+   ========================================================= */
+
+.brand-intro {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(70, 80, 90, 0.16),
+            transparent 45%
+        ),
+
+        linear-gradient(
+            135deg,
+            #111418 0%,
+            #080A0C 55%,
+            #050607 100%
+        );
+
+    overflow: hidden;
+}
+
+
+/* Subtle grid */
+
+.brand-intro::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 80px 80px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent 85%
+    );
+
+    pointer-events: none;
+}
+
+
+/* Central glow */
+
+.brand-intro::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 550px;
+    height: 550px;
+
+    border-radius: 50%;
+
+    background: rgba(214, 195, 165, 0.035);
+
+    filter: blur(80px);
+
+    pointer-events: none;
+}
+
+
+.brand-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(800px, 90%);
+
+    padding-top: 90px;
+}
+
+
+/* ---------- Main Logo ---------- */
+
+.main-logo {
+
+    width: min(420px, 70vw);
+
+    margin: 0 auto 25px;
+
+    object-fit: contain;
+}
+
+
+/* ---------- Tagline ---------- */
+
+.brand-tagline {
+
+    margin-bottom: 18px;
+
+    color: var(--ctrl-off-white);
+
+    font-family: var(--font-main);
+
+    font-size: clamp(14px, 1.5vw, 18px);
+
+    font-weight: 500;
+
+    letter-spacing: 8px;
+}
+
+
+/* ---------- Description ---------- */
+
+.brand-description {
+
+    max-width: 470px;
+
+    margin: 0 auto 35px;
+
+    color: rgba(242, 240, 235, 0.55);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* ---------- Explore Button ---------- */
+
+.explore-button {
+
+    display: inline-flex;
+
+    align-items: center;
+    gap: 18px;
+
+    padding: 14px 24px;
+
+    border: 1px solid rgba(242, 240, 235, 0.35);
+
+    color: var(--ctrl-off-white);
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    transition:
+        background var(--transition-fast),
+        color var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+
+.explore-button span {
+
+    font-size: 16px;
+
+    transition: transform var(--transition-fast);
+}
+
+
+.explore-button:hover {
+
+    background: var(--ctrl-off-white);
+
+    border-color: var(--ctrl-off-white);
+
+    color: var(--ctrl-black);
+}
+
+
+.explore-button:hover span {
+
+    transform: translateY(4px);
+}
+
+
+/* =========================================================
+   05. COLLECTION SECTIONS
+   ========================================================= */
+
+.collection-section {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* ---------- Image ---------- */
+
+.collection-image {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 0;
+}
+
+
+.collection-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 1.2s ease;
+}
+
+
+/*
+   Slight zoom when hovering over a section.
+*/
+
+.collection-section:hover
+.collection-image img {
+
+    transform: scale(1.035);
+}
+
+
+/* ---------- General Overlay ---------- */
+
+.collection-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.82) 0%,
+            rgba(0, 0, 0, 0.55) 45%,
+            rgba(0, 0, 0, 0.15) 100%
+        );
+}
+
+
+/* ---------- Collection Content ---------- */
+
+.collection-content {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: min(650px, 85%);
+
+    margin-left: 8vw;
+
+    padding-top: 60px;
+}
+
+
+.collection-number {
+
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-family: var(--font-main);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: rgba(255, 255, 255, 0.55);
+}
+
+
+.collection-label {
+
+    margin-bottom: 10px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+}
+
+
+.collection-content h1 {
+
+    margin-bottom: 20px;
+
+    font-size: clamp(70px, 10vw, 150px);
+
+    font-weight: 500;
+
+    line-height: 0.85;
+
+    letter-spacing: -4px;
+}
+
+
+.collection-description {
+
+    max-width: 430px;
+
+    margin-bottom: 32px;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, 0.72);
+}
+
+
+/* ---------- Collection Button ---------- */
+
+.collection-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 14px 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    transition: var(--transition-fast);
+}
+
+
+.collection-button span {
+
+    font-size: 17px;
+
+    transition: transform var(--transition-fast);
+}
+
+
+.collection-button:hover {
+
+    background: white;
+
+    border-color: white;
+
+    color: black;
+}
+
+
+.collection-button:hover span {
+
+    transform: translateX(5px);
+}
+
+
+/* ---------- Bottom Specifications ---------- */
+
+.collection-specs {
+
+    position: absolute;
+
+    z-index: 3;
+
+    right: 6vw;
+
+    bottom: 45px;
+
+    display: flex;
+
+    gap: 35px;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   06. LUXURY SECTION
+   ========================================================= */
+
+.luxury-section {
+
+    background: var(--luxury-midnight);
+
+    color: var(--luxury-frost);
+}
+
+
+.luxury-section .collection-image img {
+
+    filter: saturate(0.85) contrast(1.05);
+}
+
+
+.luxury-section .collection-overlay {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(7, 12, 16, 0.88),
+            rgba(7, 12, 16, 0.53),
+            rgba(7, 12, 16, 0.12)
+        );
+}
+
+
+.luxury-section .collection-label {
+
+    color: var(--luxury-champagne);
+}
+
+
+.luxury-section .collection-content h1 {
+
+    font-family: var(--font-luxury);
+
+    font-weight: 400;
+
+    letter-spacing: -2px;
+}
+
+
+.luxury-section .collection-button {
+
+    border-color: rgba(214, 195, 165, 0.55);
+
+    color: var(--luxury-champagne);
+}
+
+
+.luxury-section .collection-button:hover {
+
+    background: var(--luxury-champagne);
+
+    color: var(--luxury-midnight);
+
+    border-color: var(--luxury-champagne);
+}
+
+
+/* Glass effect on luxury specs */
+
+.luxury-section .collection-specs {
+
+    padding: 13px 20px;
+
+    border: 1px solid rgba(232, 236, 235, 0.15);
+
+    background: rgba(255, 255, 255, 0.07);
+
+    backdrop-filter: blur(15px);
+
+    -webkit-backdrop-filter: blur(15px);
+}
+
+
+/* =========================================================
+   07. VINTAGE SECTION
+   ========================================================= */
+
+/* =========================================================
+   07. VINTAGE SECTION
+   ========================================================= */
+
+.vintage-section {
+
+    background: #241A17;
+
+    color: #F0E6D4;
+}
+
+
+/* ---------- Vintage Image ---------- */
+
+.vintage-section .collection-image img {
+
+    filter:
+        sepia(8%)
+        saturate(78%)
+        contrast(1.08);
+
+    object-position: center;
+}
+
+
+/* ---------- Right-side Text Overlay ---------- */
+
+.vintage-section .collection-overlay {
+
+    background:
+        linear-gradient(
+            270deg,
+            rgba(30, 19, 16, 0.88) 0%,
+            rgba(30, 19, 16, 0.55) 35%,
+            rgba(30, 19, 16, 0.12) 70%,
+            rgba(30, 19, 16, 0.05) 100%
+        );
+}
+
+
+/* ---------- Vintage Content on RIGHT ---------- */
+
+.vintage-section .collection-content {
+
+    margin-left: auto;
+
+    margin-right: 8vw;
+
+    text-align: left;
+
+    max-width: 600px;
+}
+
+
+/* ---------- Vintage Label ---------- */
+
+.vintage-section .collection-label {
+
+    color: #B58A78;
+
+    font-family: var(--font-vintage);
+
+    font-size: 16px;
+
+    letter-spacing: 2px;
+}
+
+
+/* ---------- Vintage Heading ---------- */
+
+.vintage-section .collection-content h1 {
+
+    color: #F0E6D4;
+
+    font-family: var(--font-vintage);
+
+    font-weight: 600;
+
+    letter-spacing: -2px;
+
+    text-shadow:
+        0 2px 15px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ---------- Vintage Description ---------- */
+
+.vintage-section .collection-description {
+
+    color: #3d2316;
+
+    font-family: var(--font-vintage);
+
+    font-size: 19px;
+
+    line-height: 1.6;
+}
+
+
+/* ---------- Vintage Button ---------- */
+
+.vintage-section .collection-button {
+
+    border-color: rgba(181, 138, 120, 0.7);
+
+    color: #E7D4C4;
+
+    background: rgba(36, 26, 23, 0.18);
+
+    transition: var(--transition-fast);
+}
+
+
+.vintage-section .collection-button:hover {
+
+    background: #8A3F3F;
+
+    border-color: #8A3F3F;
+
+    color: #F8EFE3;
+}
+
+
+/* ---------- Vintage Specifications ---------- */
+
+.vintage-section .collection-specs {
+
+    position: absolute;
+
+    left: 8vw;
+    right: auto;
+
+    bottom: 45px;
+
+    display: flex;
+
+    gap: 35px;
+
+    padding: 13px 20px;
+
+    border: 1px solid rgba(111, 81, 66, 0.35);
+
+    background: rgba(240, 230, 212, 0.08);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+    color: #6F5142;
+
+    font-family: var(--font-vintage);
+
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   08. SPORTS SECTION
+   ========================================================= */
+
+/* =========================================================
+   08. SPORTS SECTION
+   ========================================================= */
+
+.sports-section {
+
+    background: #07131A;
+
+    color: #F4F5F5;
+
+    overflow: hidden;
+}
+
+
+/* ---------- Sports Image ---------- */
+
+.sports-section .collection-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.sports-section .collection-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transform: scale(1) translateX(0);
+    transform-origin: center;
+
+    filter: brightness(0.70) contrast(1.08) saturate(1.08);
+
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.sports-section:hover .collection-image img {
+    transform: scale(1.04) translateX(0);
+
+    filter: brightness(0.78) contrast(1.08) saturate(1.12);
+}
+
+
+
+
+
+/* ---------- Sports Overlay ---------- */
+
+.sports-section .collection-overlay {
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 10, 14, 0.88) 0%,
+            rgba(3, 10, 14, 0.60) 28%,
+            rgba(3, 10, 14, 0.18) 58%,
+            rgba(3, 10, 14, 0.10) 100%
+        );
+}
+
+
+/* ---------- Sports Content ---------- */
+
+.sports-section .collection-content {
+
+    margin-right: auto;
+
+    margin-left: 8vw;
+
+    text-align: left;
+
+    max-width: 600px;
+}
+
+
+/* ---------- Sports Label ---------- */
+
+.sports-section .collection-label {
+
+    color: #E85D3F;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+/* ---------- Sports Heading ---------- */
+
+.sports-section .collection-content h1 {
+
+    color: #F5F5F2;
+
+    font-weight: 800;
+
+    letter-spacing: -3px;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+
+/* ---------- Sports Description ---------- */
+
+.sports-section .collection-description {
+
+    color: rgba(245, 245, 242, 0.78);
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    max-width: 500px;
+}
+
+
+/* ---------- Sports Button ---------- */
+
+.sports-section .collection-button {
+
+    border-color: rgba(232, 93, 63, 0.75);
+
+    color: #F5F5F2;
+
+    background: rgba(7, 19, 26, 0.25);
+
+    transition: var(--transition-fast);
+}
+
+
+.sports-section .collection-button:hover {
+
+    background: #E85D3F;
+
+    border-color: #E85D3F;
+
+    color: #FFFFFF;
+}
+
+
+/* ---------- Sports Specifications ---------- */
+
+.sports-section .collection-specs {
+
+    padding: 13px 20px;
+
+    border: 1px solid rgba(232, 93, 63, 0.30);
+
+    background: rgba(7, 19, 26, 0.40);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+    color: rgba(245, 245, 242, 0.70);
+
+    letter-spacing: 2px;
+}
+
+/* =========================================================
+   09. FOOTER
+   ========================================================= */
+
+.ctrl-footer {
+
+    padding-top: 90px;
+
+    background: #070809;
+
+    color: var(--ctrl-off-white);
+}
+
+
+/* ---------- Footer Logo ---------- */
+
+.footer-logo {
+
+    width: 180px;
+
+    height: auto;
+
+    margin-bottom: 15px;
+}
+
+
+.footer-tagline {
+
+    margin-bottom: 18px;
+
+    color: var(--luxury-champagne);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+}
+
+
+.footer-description {
+
+    max-width: 330px;
+
+    color: rgba(242, 240, 235, 0.48);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* ---------- Footer Headings ---------- */
+
+.ctrl-footer h6 {
+
+    margin-bottom: 22px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: rgba(242, 240, 235, 0.5);
+}
+
+
+/* ---------- Footer Links ---------- */
+
+.footer-links {
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+.footer-links li {
+
+    margin-bottom: 12px;
+}
+
+
+.footer-links a {
+
+    color: rgba(242, 240, 235, 0.75);
+
+    font-size: 13px;
+
+    transition: var(--transition-fast);
+}
+
+
+.footer-links a:hover {
+
+    color: var(--luxury-champagne);
+
+    padding-left: 4px;
+}
+
+
+/* ---------- Contact ---------- */
+
+.footer-contact {
+
+    margin-bottom: 8px;
+
+    color: rgba(242, 240, 235, 0.7);
+
+    font-size: 13px;
+}
+
+
+/* ---------- Footer CTA ---------- */
+
+.footer-drive-button {
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 12px 18px;
+
+    border: 1px solid rgba(242, 240, 235, 0.3);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.7px;
+
+    transition: var(--transition-fast);
+}
+
+
+.footer-drive-button:hover {
+
+    background: var(--ctrl-off-white);
+
+    color: var(--ctrl-black);
+
+    border-color: var(--ctrl-off-white);
+}
+
+
+/* ---------- Footer Bottom ---------- */
+
+.footer-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 70px;
+
+    padding: 25px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.footer-bottom p {
+
+    margin: 0;
+
+    color: rgba(242, 240, 235, 0.35);
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   10. RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .ctrl-navbar {
+
+        padding: 18px 0;
+
+    }
+
+
+    .ctrl-navbar .navbar-collapse {
+
+        margin-top: 15px;
+
+        padding: 20px;
+
+        background: rgba(7, 9, 11, 0.94);
+
+        backdrop-filter: blur(20px);
+
+        -webkit-backdrop-filter: blur(20px);
+
+        border: 1px solid rgba(255, 255, 255, 0.08);
+
+    }
+
+
+    .ctrl-navbar .navbar-nav {
+
+        gap: 2px;
+
+        align-items: stretch;
+
+    }
+
+
+    .ctrl-navbar .nav-link {
+
+        padding: 12px 8px !important;
+
+        text-align: center;
+
+    }
+
+
+    .navbar-cta {
+
+        position: static;
+
+        margin-top: 10px;
+
+        text-align: center;
+
+    }
+
+
+    .nav-test-drive {
+
+        justify-content: center;
+
+        width: 100%;
+
+    }
+
+
+    .collection-content {
+
+        margin-left: 7vw;
+
+    }
+
+
+    .collection-specs {
+
+        right: 5vw;
+
+        gap: 20px;
+
+    }
+
+}
+
+
+/* =========================================================
+   11. RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .brand-content {
+
+        padding-top: 100px;
+
+    }
+
+
+    .main-logo {
+
+        width: min(330px, 78vw);
+
+    }
+
+
+    .brand-tagline {
+
+        font-size: 12px;
+
+        letter-spacing: 5px;
+
+    }
+
+
+    .brand-description {
+
+        font-size: 13px;
+
+        padding: 0 15px;
+
+    }
+
+
+    .collection-section {
+
+        min-height: 100svh;
+
+    }
+
+
+    .collection-image img {
+
+        object-position: center;
+
+    }
+
+
+    .collection-overlay {
+
+        background:
+
+            linear-gradient(
+                90deg,
+                rgba(0, 0, 0, 0.78),
+                rgba(0, 0, 0, 0.48)
+            );
+
+    }
+
+
+    .collection-content {
+
+        width: 88%;
+
+        margin-left: 6%;
+
+        padding-top: 50px;
+
+    }
+
+
+    .collection-content h1 {
+
+        font-size: clamp(62px, 18vw, 100px);
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .collection-description {
+
+        max-width: 90%;
+
+        font-size: 14px;
+
+    }
+
+
+    .collection-specs {
+
+        left: 6%;
+
+        right: auto;
+
+        bottom: 30px;
+
+        gap: 15px;
+
+        font-size: 8px;
+
+    }
+
+
+    .collection-specs span {
+
+        display: inline-block;
+
+    }
+
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+
+    }
+
+}
+
+
+/* =========================================================
+   12. VERY SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .ctrl-navbar {
+
+        padding-left: 8px;
+        padding-right: 8px;
+
+    }
+
+
+    .brand-tagline {
+
+        letter-spacing: 3px;
+
+    }
+
+
+    .collection-content h1 {
+
+        font-size: 60px;
+
+    }
+
+
+    .collection-label {
+
+        font-size: 9px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .collection-description {
+
+        font-size: 13px;
+
+    }
+
+
+    .collection-specs {
+
+        gap: 10px;
+
+        flex-wrap: wrap;
+
+        max-width: 90%;
+
+    }
+
+
+    .footer-logo {
+
+        width: 150px;
+
+    }
+
+}
+
+.luxury-section,
+.vintage-section,
+.sports-section,
+.footer-bottom {
+    border-top: 5px solid rgba(220, 205, 175, 0.18);
+}
+html {
+    scroll-behavior: smooth;
+}
+.nav-links a[href="#contact"] {
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    color: inherit;
+    text-decoration: none;
+    opacity: inherit;
+}

@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Experience | CTRL+CAR</title>
+
+    <link rel="icon" type="image/png" href="images/assets/favicon/favicon-32x32.png">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #111111;
+            color: #f5f2ec;
+            font-family: 'DM Sans', sans-serif;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 90px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 6%;
+
+            z-index: 10;
+
+            border-bottom: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .logo img {
+            width: 115px;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 38px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.78);
+
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #ffffff;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 78vh;
+
+            display: flex;
+            align-items: flex-end;
+
+            padding: 150px 7% 90px;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(17,17,17,1) 0%,
+                    rgba(17,17,17,0.72) 35%,
+                    rgba(17,17,17,0.18) 100%
+                ),
+                linear-gradient(
+                    to right,
+                    rgba(17,17,17,0.75),
+                    rgba(17,17,17,0.15)
+                ),
+                url("images/assets/hero/hero.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #c9a96e;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(55px, 8vw, 110px);
+            font-weight: 400;
+            line-height: 0.95;
+            letter-spacing: -3px;
+            margin-bottom: 28px;
+        }
+
+        .hero p {
+            max-width: 570px;
+            font-size: 17px;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.72);
+        }
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .intro {
+            padding: 120px 8%;
+            background: #f3efe7;
+            color: #171717;
+
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 100px;
+        }
+
+        .section-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #9b7b45;
+            margin-bottom: 18px;
+        }
+
+        .intro h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: clamp(38px, 4vw, 62px);
+            line-height: 1.05;
+        }
+
+        .intro-text {
+            max-width: 650px;
+        }
+
+        .intro-text p {
+            font-size: 17px;
+            line-height: 1.9;
+            color: #55504a;
+            margin-bottom: 22px;
+        }
+
+        /* =========================
+           EXPERIENCE TYPES
+        ========================= */
+
+        .experiences {
+            padding: 120px 7%;
+            background: #111111;
+        }
+
+        .experiences-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 40px;
+
+            margin-bottom: 60px;
+        }
+
+        .experiences-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(40px, 5vw, 68px);
+            font-weight: 400;
+            line-height: 1;
+        }
+
+        .experiences-header p {
+            max-width: 390px;
+            color: rgba(255,255,255,0.55);
+            font-size: 14px;
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .experience-card {
+            position: relative;
+            min-height: 520px;
+            overflow: hidden;
+
+            background: #1b1b1b;
+        }
+
+        .experience-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            transition: transform 0.7s ease;
+        }
+
+        .experience-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .experience-overlay {
+            position: absolute;
+            inset: 0;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            padding: 35px;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(0,0,0,0.9),
+                    rgba(0,0,0,0.05) 65%
+                );
+        }
+
+        .experience-number {
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #c9a96e;
+            margin-bottom: 12px;
+        }
+
+        .experience-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 34px;
+            font-weight: 400;
+            margin-bottom: 8px;
+        }
+
+        .experience-card p {
+            font-size: 13px;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.7);
+            max-width: 330px;
+        }
+
+        /* =========================
+           PROCESS
+        ========================= */
+
+        .process {
+            padding: 120px 8%;
+            background: #191919;
+        }
+
+        .process-header {
+            max-width: 650px;
+            margin-bottom: 75px;
+        }
+
+        .process-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(42px, 5vw, 68px);
+            font-weight: 400;
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+
+        .process-header p {
+            color: rgba(255,255,255,0.55);
+            font-size: 15px;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border-top: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .step {
+            padding: 35px 30px 20px 0;
+            border-right: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .step:not(:first-child) {
+            padding-left: 30px;
+        }
+
+        .step:last-child {
+            border-right: none;
+        }
+
+        .step-number {
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: #c9a96e;
+            margin-bottom: 45px;
+        }
+
+        .step h3 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .step p {
+            color: rgba(255,255,255,0.5);
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           EXPERIENCE CENTRES
+        ========================= */
+
+        .centres {
+            padding: 120px 8%;
+            background: #f3efe7;
+            color: #171717;
+        }
+
+        .centres h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(42px, 5vw, 68px);
+            font-weight: 400;
+            margin-bottom: 55px;
+        }
+
+        .city-list {
+            border-top: 1px solid rgba(0,0,0,0.2);
+        }
+
+        .city {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 25px 0;
+
+            border-bottom: 1px solid rgba(0,0,0,0.2);
+
+            transition: padding 0.3s ease;
+        }
+
+        .city:hover {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .city-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+        }
+
+        .city-address {
+            font-size: 13px;
+            color: #68635d;
+            text-align: right;
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            min-height: 60vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 100px 7%;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.72),
+                    rgba(0,0,0,0.72)
+                ),
+                url("images/assets/hero/hero.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .cta-content {
+            max-width: 850px;
+        }
+
+        .cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: clamp(45px, 6vw, 82px);
+            line-height: 1;
+            margin-bottom: 25px;
+        }
+
+        .cta p {
+            color: rgba(255,255,255,0.65);
+            margin-bottom: 35px;
+            font-size: 15px;
+        }
+
+        .cta-button {
+            display: inline-block;
+
+            padding: 15px 32px;
+
+            border: 1px solid rgba(255,255,255,0.6);
+
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #ffffff;
+            color: #111111;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 70px 7% 30px;
+            background: #0c0c0c;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 60px;
+
+            padding-bottom: 60px;
+            border-bottom: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .footer-brand img {
+            width: 115px;
+            margin-bottom: 20px;
+        }
+
+        .footer-brand p {
+            max-width: 300px;
+            color: rgba(255,255,255,0.45);
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 80px;
+        }
+
+        .footer-column h4 {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #c9a96e;
+            margin-bottom: 20px;
+        }
+
+        .footer-column a {
+            display: block;
+            font-size: 13px;
+            color: rgba(255,255,255,0.55);
+            margin-bottom: 10px;
+
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 25px;
+
+            font-size: 11px;
+            color: rgba(255,255,255,0.35);
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                gap: 18px;
+            }
+
+            .nav-links a {
+                font-size: 11px;
+            }
+
+            .intro {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .experience-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-card {
+                min-height: 500px;
+            }
+
+            .steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .step:nth-child(2) {
+                border-right: none;
+            }
+
+            .step:nth-child(3),
+            .step:nth-child(4) {
+                border-top: 1px solid rgba(255,255,255,0.15);
+            }
+
+            .footer-top {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            nav {
+                height: 75px;
+                padding: 0 5%;
+            }
+
+            .logo img {
+                width: 95px;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 9px;
+                letter-spacing: 0.8px;
+            }
+
+            .hero {
+                min-height: 70vh;
+                padding: 130px 7% 65px;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .intro,
+            .experiences,
+            .process,
+            .centres {
+                padding: 80px 7%;
+            }
+
+            .experiences-header {
+                display: block;
+            }
+
+            .experiences-header p {
+                margin-top: 25px;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .step,
+            .step:not(:first-child) {
+                padding: 30px 0;
+                border-right: none;
+                border-bottom: 1px solid rgba(255,255,255,0.15);
+            }
+
+            .step:last-child {
+                border-bottom: none;
+            }
+
+            .step-number {
+                margin-bottom: 25px;
+            }
+
+            .city {
+                display: block;
+            }
+
+            .city-address {
+                text-align: left;
+                margin-top: 5px;
+            }
+
+            .footer-links {
+                gap: 35px;
+                flex-wrap: wrap;
+            }
+
+            .footer-bottom {
+                display: block;
+            }
+
+            .footer-bottom span {
+                display: block;
+                margin-bottom: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <nav>
+
+        <a href="index.html" class="logo">
+            <img src="images/assets/logo/logo-main.png" alt="CTRL+CAR">
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="luxury.html">Luxury</a>
+            <a href="vintage.html">Vintage</a>
+            <a href="sports.html">Sports</a>
+            <a href="compare.html">Compare</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                The CTRL+CAR Experience
+            </div>
+
+            <h1>
+                Meet the<br>
+                machine.
+            </h1>
+
+            <p>
+                Beyond specifications, photographs and screens.
+                Experience the character, engineering and presence
+                of the world's most remarkable automobiles.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         INTRO
+    ========================= -->
+
+    <section class="intro">
+
+        <div>
+
+            <div class="section-label">
+                The Philosophy
+            </div>
+
+            <h2>
+                Cars are meant<br>
+                to be experienced.
+            </h2>
+
+        </div>
+
+        <div class="intro-text">
+
+            <p>
+                CTRL+CAR was created for people who appreciate
+                automobiles beyond their numbers.
+            </p>
+
+            <p>
+                From the quiet refinement of a luxury sedan to
+                the raw character of a classic and the intensity
+                of a performance machine, every car tells a
+                different story.
+            </p>
+
+            <p>
+                Our experience brings that story closer —
+                helping you discover the machine that feels right
+                for you.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXPERIENCES
+    ========================= -->
+
+    <section class="experiences">
+
+        <div class="experiences-header">
+
+            <div>
+
+                <div class="section-label">
+                    Choose Your Experience
+                </div>
+
+                <h2>
+                    Three worlds.<br>
+                    One passion.
+                </h2>
+
+            </div>
+
+            <p>
+                Explore three distinct automotive worlds,
+                each with its own personality, history and
+                definition of performance.
+            </p>
+
+        </div>
+
+
+        <div class="experience-grid">
+
+            <!-- Luxury -->
+
+            <a href="luxury.html" class="experience-card">
+
+                <img
+                    src="images/home/luxury-exp.png"
+                    alt="Luxury automobile"
+                >
+
+                <div class="experience-overlay">
+
+                    <div class="experience-number">
+                        01 / LUXURY
+                    </div>
+
+                    <h3>
+                        Luxury
+                    </h3>
+
+                    <p>
+                        Sophistication, craftsmanship and
+                        effortless performance.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- Vintage -->
+
+            <a href="vintage.html" class="experience-card">
+
+                <img
+                    src="images/home/vintage-exp.png"
+                    alt="Vintage automobiles"
+                >
+
+                <div class="experience-overlay">
+
+                    <div class="experience-number">
+                        02 / VINTAGE
+                    </div>
+
+                    <h3>
+                        Vintage
+                    </h3>
+
+                    <p>
+                        Timeless design, heritage and
+                        the character of another era.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- Sports -->
+
+            <a href="sports.html" class="experience-card">
+
+                <img
+                    src="images/home/sports-exp.png"
+                    alt="Sports automobile"
+                >
+
+                <div class="experience-overlay">
+
+                    <div class="experience-number">
+                        03 / SPORTS
+                    </div>
+
+                    <h3>
+                        Sports
+                    </h3>
+
+                    <p>
+                        Precision engineering, speed and
+                        uncompromising performance.
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HOW IT WORKS
+    ========================= -->
+
+    <section class="process">
+
+        <div class="process-header">
+
+            <div class="section-label">
+                The Process
+            </div>
+
+            <h2>
+                Your experience,<br>
+                your way.
+            </h2>
+
+            <p>
+                Discover a car, choose where you want to
+                experience it and prepare for the drive.
+            </p>
+
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <h3>
+                    Choose your car
+                </h3>
+
+                <p>
+                    Explore our Luxury, Vintage and Sports
+                    collections and find the machine that
+                    catches your attention.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <h3>
+                    Choose your city
+                </h3>
+
+                <p>
+                    Select a CTRL+CAR Experience Centre
+                    closest to you.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <h3>
+                    Pick your date
+                </h3>
+
+                <p>
+                    Select a convenient date and time for
+                    your experience.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    04
+                </div>
+
+                <h3>
+                    Meet the machine
+                </h3>
+
+                <p>
+                    Arrive at the showroom and experience
+                    the car beyond the screen.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXPERIENCE CENTRES
+    ========================= -->
+
+    <section class="centres">
+
+        <div class="section-label">
+            Experience Centres
+        </div>
+
+        <h2>
+            Find us.
+        </h2>
+
+
+        <div class="city-list">
+
+            <div class="city">
+
+                <div class="city-name">
+                    Ahmedabad
+                </div>
+
+                <div class="city-address">
+                    CTRL+CAR Experience Centre<br>
+                    SG Highway, Ahmedabad
+                </div>
+
+            </div>
+
+
+            <div class="city">
+
+                <div class="city-name">
+                    Jaipur
+                </div>
+
+                <div class="city-address">
+                    CTRL+CAR Experience Centre<br>
+                    Tonk Road, Jaipur
+                </div>
+
+            </div>
+
+
+            <div class="city">
+
+                <div class="city-name">
+                    Delhi
+                </div>
+
+                <div class="city-address">
+                    CTRL+CAR Experience Centre<br>
+                    Aerocity, New Delhi
+                </div>
+
+            </div>
+
+
+            <div class="city">
+
+                <div class="city-name">
+                    Mumbai
+                </div>
+
+                <div class="city-address">
+                    CTRL+CAR Experience Centre<br>
+                    Bandra Kurla Complex, Mumbai
+                </div>
+
+            </div>
+
+
+            <div class="city">
+
+                <div class="city-name">
+                    Bengaluru
+                </div>
+
+                <div class="city-address">
+                    CTRL+CAR Experience Centre<br>
+                    Bengaluru
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================= -->
+
+    <section class="cta">
+
+        <div class="cta-content">
+
+            <div class="section-label">
+                Your Next Drive
+            </div>
+
+            <h2>
+                Experience the<br>
+                extraordinary.
+            </h2>
+
+            <p>
+                The best way to understand a car is to drive it.
+            </p>
+
+            <a href="index.html#test-drive" class="cta-button">
+                Book a Test Drive
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+
+                <img
+                    src="images/assets/logo/logo-main.png"
+                    alt="CTRL+CAR"
+                >
+
+                <p>
+                    A curated automotive experience built around
+                    design, engineering, heritage and performance.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <div class="footer-column">
+
+                    <h4>
+                        Explore
+                    </h4>
+
+                    <a href="luxury.html">
+                        Luxury
+                    </a>
+
+                    <a href="vintage.html">
+                        Vintage
+                    </a>
+
+                    <a href="sports.html">
+                        Sports
+                    </a>
+
+                    <a href="compare.html">
+                        Compare
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Company
+                    </h4>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="technology.html">
+                        Technology
+                    </a>
+
+                    <a href="experience.html">
+                        Experience
+                    </a>
+
+                    <a href="index.html#contact">
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 CTRL+CAR. All rights reserved.
+            </span>
+
+            <span>
+                Built for those who love cars.
+            </span>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
